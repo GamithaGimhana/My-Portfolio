@@ -1,0 +1,43 @@
+body{
+    background: slategray;
+}
+
+body>header{
+    width: 100vw;
+    height: 10vh;
+}
+
+body>header>h1{
+    width: 15%;
+    padding-left: 20px;
+    position: absolute;
+}
+
+body>header>h1>a{
+    font-size: 16px;
+    text-decoration: none;
+    position: absolute;
+    color: white;
+}
+
+body>header>nav{
+    right: 0;
+    margin: auto;
+    padding-top: 30px;
+    padding-right: 20px;
+    position: absolute;
+}
+
+body>header>nav>a{
+    font-size: 16px;
+    text-decoration: none;
+    padding-right: 10px;
+    color: white;
+}
+
+body>main>section:first-child>div:first-child{
+    width: 15vw;
+    background: darkslategray;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+}
