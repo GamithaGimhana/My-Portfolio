@@ -9,3 +9,59 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
+
+body>header{
+    width: 100%;
+    height: 10vh;
+    padding: 10px 5%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body>header>h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body>header>h1>a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #141517;
+}
+
+body>header>h1:nth-child(2){
+    display: none;
+}
+
+body>header>nav{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+body>header>nav>a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #141517;
+    position: relative;
+}
+
+body>header>nav>a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #141517;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+body>header>nav>a:hover::after{
+    width: 100%;
+}
