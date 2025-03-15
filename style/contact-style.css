@@ -1,5 +1,5 @@
 body{
-    background: #FFFFFF;
+    background: #999D9E;
     gap: 0;
     position: relative;
 }
@@ -12,7 +12,6 @@ body{
 
 body>header{
     width: 100%;
-    height: 10vh;
     padding: 10px 5%;
     position: fixed;
     top: 0;
@@ -22,20 +21,23 @@ body>header{
     align-items: center;
 }
 
-body>header>h1{
+body>header>h1 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    position: relative;
 }
 
 body>header>h1>a{
     font-size: 18px;
     text-decoration: none;
-    color: #141517;
+    color: white;
 }
 
 body>header>h1:nth-child(2){
     display: none;
+    position: absolute;
+    left: 60px;
+    top: 10px;
 }
 
 body>header>nav{
@@ -47,7 +49,7 @@ body>header>nav{
 body>header>nav>a{
     font-size: 18px;
     text-decoration: none;
-    color: #141517;
+    color: white;
     position: relative;
 }
 
@@ -55,7 +57,7 @@ body>header>nav>a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #141517;
+    background: #FFFFFF;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -64,4 +66,124 @@ body>header>nav>a::after{
 
 body>header>nav>a:hover::after{
     width: 100%;
+}
+
+body>header>h1:last-child{
+    display: none;
+}
+
+body>main{
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body>main>section{
+    width: 100%;
+}
+
+body>footer{
+    background: #141517;
+    padding: 32px 8%;
+    color: #FFFFFF;
+}
+
+body>footer>nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+body>footer>nav>div:first-child>a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+body>footer>nav>div:first-child>a:hover{
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+body>footer>nav>div:last-child{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+body>footer>nav>div:last-child>h4{
+    font-size: 14px;
+    color: #999D9E;
+}
+
+body>footer>nav>div:last-child>a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+body>footer>nav>div:last-child>a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #455CE9;
+    transition: width 0.3s ease;
+}
+
+body>footer>nav>div:last-child>a:hover{
+    color: #455CE9;
+}
+
+body>footer>nav>div:last-child>a:hover::after{
+    width: 100%;
+}
+
+
+/*media*/
+@media screen and (max-width: 768px) {
+    body>header>nav{
+        display: none;
+    }
+    body>header>h1:last-child{
+        display: block;
+    }
+
+    body>footer>nav{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    body>footer>nav>div:last-child{
+        width: 100%;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body>footer{
+        padding: 1.5rem 5%;
+    }
+
+    body>footer>nav>div:last-child{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    body>footer>nav>div:last-child>h4{
+        margin-bottom: 0.5rem;
+    }
 }

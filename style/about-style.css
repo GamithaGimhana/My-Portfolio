@@ -1,5 +1,5 @@
 body{
-    background: #FFFFFF;
+    background: #999D9E;
     gap: 0;
     position: relative;
 }
@@ -12,7 +12,6 @@ body{
 
 body>header{
     width: 100%;
-    height: 10vh;
     padding: 10px 5%;
     position: fixed;
     top: 0;
@@ -22,20 +21,23 @@ body>header{
     align-items: center;
 }
 
-body>header>h1{
+body>header>h1 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    position: relative;
 }
 
 body>header>h1>a{
     font-size: 18px;
     text-decoration: none;
-    color: #141517;
+    color: white;
 }
 
 body>header>h1:nth-child(2){
     display: none;
+    position: absolute;
+    left: 60px;
+    top: 10px;
 }
 
 body>header>nav{
@@ -47,7 +49,7 @@ body>header>nav{
 body>header>nav>a{
     font-size: 18px;
     text-decoration: none;
-    color: #141517;
+    color: white;
     position: relative;
 }
 
@@ -55,7 +57,7 @@ body>header>nav>a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #141517;
+    background: #FFFFFF;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -64,4 +66,330 @@ body>header>nav>a::after{
 
 body>header>nav>a:hover::after{
     width: 100%;
+}
+
+body>header>h1:last-child{
+    display: none;
+}
+
+body>main{
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body>main>section{
+    width: 100%;
+}
+
+/* Contact Section Container */
+body>main>section:nth-child(4)>div{
+    min-height: 80vh;
+    padding: 5% 8%;
+    background: #141517;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Contact Content Container */
+body>main>section:nth-child(4)>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+/* Left Side Container */
+body>main>section:nth-child(4)>div>div:first-child{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* Profile Image and Heading Container */
+body>main>section:nth-child(4)>div>div:first-child>div:first-child{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+/* Profile Image Container */
+body>main>section:nth-child(4)>div>div:first-child>div:first-child>div{
+    background: linear-gradient(145deg, #999D9E, #b3b7b8);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Profile Image Container Hover Effect */
+body>main>section:nth-child(4)>div>div:first-child>div:first-child>div:hover{
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Image */
+body>main>section:nth-child(4)>div>div:first-child>div:first-child>div>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Heading */
+body>main>section:nth-child(4)>div>div:first-child>div:first-child>h2{
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Buttons Container */
+body>main>section:nth-child(4)>div>div:first-child>div:nth-child(2){
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* Contact Buttons */
+body>main>section:nth-child(4)>div>div:first-child>div:nth-child(2)>button{
+    background: rgba(28, 29, 32, 0.7);
+    padding: 20px 32px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 48px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /*backdrop-filter: blur(5px);*/
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Buttons Hover Effect */
+body>main>section:nth-child(4)>div>div:first-child>div:nth-child(2)>button:hover{
+    background: #455CE9;
+    transform: translateY(-5px);
+    border: none;
+}
+
+/* Contact Button Links */
+body>main>section:nth-child(4)>div>div:first-child>div:nth-child(2)>button>a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Right Side Container */
+body>main>section:nth-child(4)>div>div:nth-child(2){
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Get in Touch Button */
+body>main>section:nth-child(4)>div>div:nth-child(2)>button{
+    background: #455CE9;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Get in Touch Button Hover Animation */
+body>main>section:nth-child(4)>div>div:nth-child(2)>button:hover{
+    background: #334BD3;
+    transform: scale(1.05);
+}
+
+/* Get in Touch Button Link */
+body>main>section:nth-child(4)>div>div:nth-child(2)>button>a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+/* Divider */
+body>main>section:nth-child(4)>div>hr{
+    width: 100%;
+    height: 1px;
+    /*background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);*/
+    background: #FFFFFF;
+    border: none;
+    margin-top: 48px;
+}
+
+body>footer{
+    background: #141517;
+    padding: 32px 8%;
+    color: #FFFFFF;
+}
+
+body>footer>nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+body>footer>nav>div:first-child>a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+body>footer>nav>div:first-child>a:hover{
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+body>footer>nav>div:last-child{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+body>footer>nav>div:last-child>h4{
+    font-size: 14px;
+    color: #999D9E;
+}
+
+body>footer>nav>div:last-child>a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+body>footer>nav>div:last-child>a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #455CE9;
+    transition: width 0.3s ease;
+}
+
+body>footer>nav>div:last-child>a:hover{
+    color: #455CE9;
+}
+
+body>footer>nav>div:last-child>a:hover::after{
+    width: 100%;
+}
+
+
+/*media*/
+@media screen and (max-width: 1024px) {
+    body > main > section:nth-child(4) > div {
+        padding: 5%;
+    }
+
+    body > main > section:nth-child(4) > div > div:first-child > div:first-child > h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body>header>nav{
+        display: none;
+    }
+    body>header>h1:last-child{
+        display: block;
+    }
+
+    body > main > section:nth-child(4) > div {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    body > main > section:nth-child(4) > div > div:first-child {
+        width: 100%;
+    }
+
+    body > main > section:nth-child(4) > div > div:first-child > div:first-child {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    body > main > section:nth-child(4) > div > div:first-child > div:nth-child(2) {
+        justify-content: center;
+    }
+
+    body > main > section:nth-child(4) > div > div:nth-child(2) {
+        width: 100%;
+    }
+
+    body>footer>nav{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    body>footer>nav>div:last-child{
+        width: 100%;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body > main > section:nth-child(4) > div > div:first-child > div:first-child > div {
+        width: 100px;
+        height: 100px;
+    }
+
+    body > main > section:nth-child(4) > div > div:first-child > div:first-child > h2 {
+        font-size: 1.8rem;
+    }
+
+    body > main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > button {
+        width: 100%;
+    }
+
+    body > main > section:nth-child(4) > div > div:nth-child(2) > button {
+        width: 150px;
+        height: 150px;
+    }
+
+    body>footer{
+        padding: 1.5rem 5%;
+    }
+
+    body>footer>nav>div:last-child{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    body>footer>nav>div:last-child>h4{
+        margin-bottom: 0.5rem;
+    }
 }
