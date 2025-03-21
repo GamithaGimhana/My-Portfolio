@@ -13,12 +13,13 @@ body{
 body>header{
     width: 100%;
     padding: 10px 5%;
-    position: fixed;
+    /*position: fixed;*/
     top: 0;
     z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #FFFFFF;
 }
 
 body>header>h1 {
@@ -30,7 +31,7 @@ body>header>h1 {
 body>header>h1>a{
     font-size: 18px;
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 body>header>h1:nth-child(2){
@@ -49,7 +50,7 @@ body>header>nav{
 body>header>nav>a{
     font-size: 18px;
     text-decoration: none;
-    color: white;
+    color: black;
     position: relative;
 }
 
@@ -80,6 +81,34 @@ body>main{
 
 body>main>section{
     width: 100%;
+}
+
+body>main>section:first-child>div{
+    height: 82vh;
+    background-color: white;
+    display: flex;
+    padding: 10px 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body>main>section:first-child>div>div:first-child{
+    width: 800px;
+    padding: 10px 5%;
+}
+
+body>main>section:first-child>div>div:first-child>h1{
+    font-size: 80px;
+}
+
+body>main>section:first-child>div>div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    /*min-width: 200px;*/
+    /*top: 500px;*/
+    /*left: 1100px;*/
 }
 
 body>main>section:nth-child(2)>div{
@@ -427,44 +456,58 @@ body>footer>nav>div:last-child>a:hover::after{
 
 /*media*/
 @media screen and (max-width: 1024px) {
-    body > main > section:nth-child(4) > div {
+    body > main > section:nth-child(3) > div {
         padding: 5%;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:first-child > h2 {
+    body > main > section:nth-child(3) > div > div:first-child > div:first-child > h2 {
         font-size: 2rem;
     }
 }
 
 @media screen and (max-width: 768px) {
-    body>header>nav{
-        display: none;
-    }
-    body>header>h1:last-child{
-        display: block;
+    /* Work section */
+    body>main>section:nth-child(2)>div>div>div:first-child>h2>a {
+        font-size: 40px;
     }
 
-    body > main > section:nth-child(4) > div {
+    body>main>section:nth-child(2)>div>div {
+        height: auto;
+        flex-direction: column;
+    }
+
+    body>main>section:nth-child(2)>div>div>div:first-child,
+    body>main>section:nth-child(2)>div>div>div:nth-child(2),
+    body>main>section:nth-child(2)>div>div>div:last-child {
+        width: 100%;
+        padding: 15px;
+    }
+
+    body>main>section:nth-child(2)>div>div>div:nth-child(2){
+        height: 35vh;
+    }
+
+    body > main > section:nth-child(3) > div {
         flex-direction: column;
         gap: 3rem;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child {
+    body > main > section:nth-child(3) > div > div:first-child {
         width: 100%;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:first-child {
+    body > main > section:nth-child(3) > div > div:first-child > div:first-child {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 1rem;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:nth-child(2) {
+    body > main > section:nth-child(3) > div > div:first-child > div:nth-child(2) {
         justify-content: center;
     }
 
-    body > main > section:nth-child(4) > div > div:nth-child(2) {
+    body > main > section:nth-child(3) > div > div:nth-child(2) {
         width: 100%;
     }
 
@@ -482,20 +525,40 @@ body>footer>nav>div:last-child>a:hover::after{
 }
 
 @media screen and (max-width: 480px) {
-    body > main > section:nth-child(4) > div > div:first-child > div:first-child > div {
+    body>header>nav{
+        display: none;
+    }
+    body>header>h1:last-child{
+        display: block;
+    }
+
+    body > main > section:first-child > div > div:first-child > h1 {
+        font-size: 36px;
+    }
+
+    body>main>section:nth-child(3)>div>div>div:nth-child(2){
+        height: 35vh;
+    }
+
+    body>main>section:nth-child(3)>div>div>div:first-child>h2>a {
+        font-size: 32px;
+    }
+
+    body > main > section:nth-child(3) > div > div:first-child > div:first-child > div {
         width: 100px;
         height: 100px;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:first-child > h2 {
+    body > main > section:nth-child(3) > div > div:first-child > div:first-child > h2 {
         font-size: 1.8rem;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > button {
+    body > main > section:nth-child(3) > div > div:first-child > div:nth-child(2) > button {
         width: 100%;
+        height: 80px;
     }
 
-    body > main > section:nth-child(4) > div > div:nth-child(2) > button {
+    body > main > section:nth-child(3) > div > div:nth-child(2) > button {
         width: 150px;
         height: 150px;
     }

@@ -163,16 +163,38 @@ body>main>section:first-child>div>div:nth-child(3)>h4{
     text-align: center;
 }
 
+body>main>section:first-child>div>div:nth-child(4){
+    display: flex;
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+    flex-direction: column;
+}
+
 /* Moving name */
-body>main>section:first-child>div>h1{
+body>main>section:first-child>div>div:nth-child(4)>h1{
+    display: inline;
     font-size: 180px;
     font-weight: normal;
     color: #FFFFFF;
     text-align: center;
-    grid-column: 1 / 5;
-    grid-row: 3 / 4;
     margin: 0;
     z-index: 1;
+    position: absolute;
+
+    animation-name: moving-name;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    white-space: nowrap;
+}
+
+@keyframes moving-name {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 body>main>section:nth-child(2)>div{
@@ -656,6 +678,22 @@ body>footer>nav>div:last-child>a:hover::after{
         font-size: 40px;
     }
 
+    body>main>section:nth-child(3)>div>div {
+        height: auto;
+        flex-direction: column;
+    }
+
+    body>main>section:nth-child(3)>div>div>div:first-child,
+    body>main>section:nth-child(3)>div>div>div:nth-child(2),
+    body>main>section:nth-child(3)>div>div>div:last-child {
+        width: 100%;
+        padding: 15px;
+    }
+
+    body>main>section:nth-child(3)>div>div>div:nth-child(2){
+        height: 35vh;
+    }
+
     body > main > section:nth-child(4) > div {
         flex-direction: column;
         gap: 3rem;
@@ -712,25 +750,25 @@ body>footer>nav>div:last-child>a:hover::after{
     }
 
     /* Work section */
-    body>main>section:nth-child(3)>div>div {
-        height: auto;
-        flex-direction: column;
-    }
+    /*body>main>section:nth-child(3)>div>div {*/
+    /*    height: auto;*/
+    /*    flex-direction: column;*/
+    /*}*/
 
-    body>main>section:nth-child(3)>div>div>div:first-child,
-    body>main>section:nth-child(3)>div>div>div:nth-child(2),
-    body>main>section:nth-child(3)>div>div>div:last-child {
-        width: 100%;
-        padding: 15px;
-    }
+    /*body>main>section:nth-child(3)>div>div>div:first-child,*/
+    /*body>main>section:nth-child(3)>div>div>div:nth-child(2),*/
+    /*body>main>section:nth-child(3)>div>div>div:last-child {*/
+    /*    width: 100%;*/
+    /*    padding: 15px;*/
+    /*}*/
 
-    body>main>section:nth-child(3)>div>div>div:nth-child(2){
-        height: 35vh;
-    }
+    /*body>main>section:nth-child(3)>div>div>div:nth-child(2){*/
+    /*    height: 35vh;*/
+    /*}*/
 
-    body>main>section:nth-child(3)>div>div>div:first-child>h2>a {
-        font-size: 32px;
-    }
+    /*body>main>section:nth-child(3)>div>div>div:first-child>h2>a {*/
+    /*    font-size: 32px;*/
+    /*}*/
 
     body > main > section:nth-child(4) > div > div:first-child > div:first-child > div {
         width: 100px;
