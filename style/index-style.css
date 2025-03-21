@@ -30,7 +30,7 @@ body>header>h1 {
 body>header>h1>a{
     font-size: 18px;
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 body>header>h1:nth-child(2){
@@ -49,7 +49,7 @@ body>header>nav{
 body>header>nav>a{
     font-size: 18px;
     text-decoration: none;
-    color: white;
+    color: black;
     position: relative;
 }
 
@@ -57,7 +57,7 @@ body>header>nav>a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #FFFFFF;
+    background: black;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -644,13 +644,6 @@ body>footer>nav>div:last-child>a:hover::after{
 }
 
 @media screen and (max-width: 768px) {
-    body>header>nav{
-        display: none;
-    }
-    body>header>h1:last-child{
-        display: block;
-    }
-
     body>main>section:first-child>div>h1{
         font-size: 140px;
     }
@@ -732,6 +725,13 @@ body>footer>nav>div:last-child>a:hover::after{
 }
 
 @media screen and (max-width: 480px) {
+    body>header>nav{
+        display: none;
+    }
+    body>header>h1:last-child{
+        display: block;
+    }
+
     /* About section */
     body>main>section:nth-child(2)>div {
         height: auto;
@@ -770,6 +770,14 @@ body>footer>nav>div:last-child>a:hover::after{
     /*    font-size: 32px;*/
     /*}*/
 
+    body>main>section:nth-child(4)>div>div>div:nth-child(2){
+        height: 35vh;
+    }
+
+    body>main>section:nth-child(4)>div>div>div:first-child>h2>a {
+        font-size: 32px;
+    }
+
     body > main > section:nth-child(4) > div > div:first-child > div:first-child > div {
         width: 100px;
         height: 100px;
@@ -781,6 +789,7 @@ body>footer>nav>div:last-child>a:hover::after{
 
     body > main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > button {
         width: 100%;
+        height: 80px;
     }
 
     body > main > section:nth-child(4) > div > div:nth-child(2) > button {

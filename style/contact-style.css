@@ -13,7 +13,7 @@ body{
 body>header{
     width: 100%;
     padding: 10px 5%;
-    position: fixed;
+    /*position: fixed;*/
     top: 0;
     z-index: 1;
     display: flex;
@@ -79,7 +79,86 @@ body>main{
 }
 
 body>main>section{
+    width: 70%;
+}
+
+/* Form section */
+body > main > section:nth-of-type(2) {
+    padding: 10px 5%;
+}
+
+body > main > section:nth-of-type(2) > div {
+    background-color: #252525;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body > main > section:nth-of-type(2) form {
     width: 100%;
+}
+
+body > main > section:nth-of-type(2) form > div:first-child > ol {
+    list-style-position: inside;
+    padding: 0;
+}
+
+body > main > section:nth-of-type(2) form > div:first-child > ol > li {
+    margin-bottom: 1.5rem;
+}
+
+body > main > section:nth-of-type(2) form > div:first-child > ol > li > b {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+body > main > section:nth-of-type(2) form > div:first-child > ol > li > hr {
+    border: none;
+    height: 1px;
+    background-color: #444;
+    margin: 0.75rem 0;
+}
+
+body > main > section:nth-of-type(2) form input,
+body > main > section:nth-of-type(2) form textarea {
+    width: 100%;
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    outline: none;
+}
+
+body > main > section:nth-of-type(2) form input::placeholder,
+body > main > section:nth-of-type(2) form textarea::placeholder {
+    color: #999;
+    opacity: 0.7;
+}
+
+body > main > section:nth-of-type(2) form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+body > main > section:nth-of-type(2) form button {
+    background-color: #455CE9;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+}
+
+body > main > section:nth-of-type(2) form button:hover {
+    background-color: #344bd0;
+    transform: translateY(-2px);
 }
 
 body>footer{
@@ -152,13 +231,6 @@ body>footer>nav>div:last-child>a:hover::after{
 
 /*media*/
 @media screen and (max-width: 768px) {
-    body>header>nav{
-        display: none;
-    }
-    body>header>h1:last-child{
-        display: block;
-    }
-
     body>footer>nav{
         flex-direction: column;
         align-items: flex-start;
@@ -173,6 +245,13 @@ body>footer>nav>div:last-child>a:hover::after{
 }
 
 @media screen and (max-width: 480px) {
+    body>header>nav{
+        display: none;
+    }
+    body>header>h1:last-child{
+        display: block;
+    }
+
     body>footer{
         padding: 1.5rem 5%;
     }
