@@ -179,11 +179,11 @@ body > main > section:nth-child(2)> div > div:first-child > div:nth-child(2) > h
 body > main > section:nth-child(2)> div > div:first-child > div:nth-child(2) > h3::after {
     content: '';
     position: absolute;
-    width: 50%;
+    width: 120%;
     height: 3px;
     background: #455CE9;
     bottom: -8px;
-    left: 0;
+    left: -5px;
 }
 
 body > main > section:nth-child(2)> div > div:first-child > div:nth-child(2) > ul {
