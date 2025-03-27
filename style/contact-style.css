@@ -19,6 +19,7 @@ body>header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: #141517;
 }
 
 body>header>h1 {
@@ -76,31 +77,67 @@ body>main{
     width: 100%;
     box-sizing: border-box;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 body>main>section{
     width: 70%;
 }
 
+body > main > section:first-child{
+    width: 100%;
+}
+
+body > main > section:first-child > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 200px 8% 200px;
+    background: linear-gradient(to bottom, #141517, #1c1d20);
+}
+
+body > main > section:first-child> div > div > h1 {
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #FFFFFF;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 /* Form section */
 body > main > section:nth-of-type(2) {
     padding: 10px 5%;
+    background: linear-gradient(to bottom, #1c1d20, #141517);
 }
 
 body > main > section:nth-of-type(2) > div {
-    background-color: #252525;
     border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #2c2c2c, #252525);
+    transition: all 0.3s ease;
+}
+
+body > main > section:nth-of-type(2) > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 body > main > section:nth-of-type(2) form {
     width: 100%;
+    padding: 10px 5%;
 }
 
 body > main > section:nth-of-type(2) form > div:first-child > ol {
     list-style-position: inside;
-    padding: 0;
+}
+
+body > main > section:nth-of-type(2) form > div:first-child > ol > hr {
+    border: none;
+    height: 1px;
+    background-color: #444;
+    margin: 0.75rem 0;
 }
 
 body > main > section:nth-of-type(2) form > div:first-child > ol > li {
@@ -109,9 +146,10 @@ body > main > section:nth-of-type(2) form > div:first-child > ol > li {
 
 body > main > section:nth-of-type(2) form > div:first-child > ol > li > b {
     display: block;
-    margin: 0.5rem 0;
-    font-size: 1rem;
+    /*margin: 0.5rem 0;*/
+    font-size: 24px;
     color: #ffffff;
+    padding-top: 1.66em;
 }
 
 body > main > section:nth-of-type(2) form > div:first-child > ol > li > hr {
@@ -136,6 +174,7 @@ body > main > section:nth-of-type(2) form input::placeholder,
 body > main > section:nth-of-type(2) form textarea::placeholder {
     color: #999;
     opacity: 0.7;
+    font-size: 20px;
 }
 
 body > main > section:nth-of-type(2) form textarea {
@@ -143,22 +182,97 @@ body > main > section:nth-of-type(2) form textarea {
     resize: vertical;
 }
 
-body > main > section:nth-of-type(2) form button {
-    background-color: #455CE9;
-    color: white;
-    border: none;
-    padding: 0.75rem 2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 1rem;
+body > main > section:nth-of-type(2)>div>form>div:nth-child(2) {
+    display: flex;
+    justify-content: flex-end; /* Aligns the button to the right */
+    margin-top: 1rem; /* Adds some space above the button */
 }
 
-body > main > section:nth-of-type(2) form button:hover {
-    background-color: #344bd0;
-    transform: translateY(-2px);
+body > main > section:nth-of-type(2)>div>form>div:nth-child(2) button {
+    background: #455CE9;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+body > main > section:nth-of-type(2)>div>form>div:nth-child(2) button:hover{
+    background: #334BD3;
+    transform: scale(1.05);
+}
+
+body > main> section:nth-child(2) form hr{
+    border: none;
+    height: 1px;
+    background-color: #444;
+    margin: 0.75rem 0;
+}
+
+/* Contact Details Section */
+body > main > section:nth-of-type(3) {
+    width: 30%;
+    padding: 20px 5%;
+    background: linear-gradient(to bottom, #1c1d20, #141517);
+    /*border-left: 4px solid #455CE9;*/
+}
+
+body > main > section:nth-of-type(3)>div>div{
+    margin: 50px 50px 50px 2px;
+}
+
+body > main > section:nth-of-type(3) picture img {
+    border-radius: 50%;
+    border: 3px solid #455CE9;
+    transition: transform 0.3s ease;
+}
+
+body > main > section:nth-of-type(3) picture img:hover {
+    transform: scale(1.05);
+}
+
+body > main > section:nth-of-type(3) dl dt {
+    color: #999D9E;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+
+body > main > section:nth-of-type(3) dl dd {
+    padding-top: 10px;
+}
+
+body > main > section:nth-of-type(3) dl dd a {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+body > main > section:nth-of-type(3) dl dd a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #455CE9;
+    transition: width 0.3s ease;
+}
+
+body > main > section:nth-of-type(3) dl dd a:hover {
+    color: #6A7DFF;
+}
+
+body > main > section:nth-of-type(3) dl dd a:hover::after {
+    width: 100%;
 }
 
 body>footer{
@@ -228,41 +342,149 @@ body>footer>nav>div:last-child>a:hover::after{
     width: 100%;
 }
 
+/* Desktop - 1440px (Base Design) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    body > main {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
 
-/*media*/
-@media screen and (max-width: 768px) {
-    body>footer>nav{
+    body > main > section:first-child > div {
+        padding: 250px 10% 250px;
+    }
+
+    body > main > section:first-child > div > div > h1 {
+        font-size: 78px;
+    }
+
+    body > main > section {
+        width: 70%;
+    }
+
+    body > main > section:nth-of-type(3) {
+        width: 30%;
+    }
+
+    body > header > nav {
+        gap: 40px;
+    }
+}
+
+/* Laptop - 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    body > main > section:first-child > div {
+        padding: 200px 8% 200px;
+    }
+
+    body > main > section:first-child > div > div > h1 {
+        font-size: 58px;
+    }
+
+    body > header > nav {
+        gap: 25px;
+    }
+}
+
+/* Tablet - 768px */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    body > main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > main > section {
+        width: 100%;
+    }
+
+    body > main > section:nth-of-type(3) {
+        width: 100%;
+    }
+
+    /*body > header > nav {*/
+    /*    display: none;*/
+    /*}*/
+
+    /*body > header > h1:last-child {*/
+    /*    display: block;*/
+    /*}*/
+
+    body > main > section:first-child > div {
+        padding: 200px 8% 200px;
+    }
+
+    body > main > section:first-child > div > div > h1 {
+        font-size: 58px;
+    }
+
+    body > main > section:nth-of-type(2)>div>form>div:nth-child(2) button {
+        width: 150px;
+        height: 150px;
+    }
+
+    body > footer > nav {
         flex-direction: column;
         align-items: flex-start;
         gap: 1.5rem;
     }
 
-    body>footer>nav>div:last-child{
+    body > footer > nav > div:last-child {
         width: 100%;
         justify-content: flex-start;
         gap: 1rem;
     }
 }
 
-@media screen and (max-width: 480px) {
-    body>header>nav{
+/* Mobile Phone - 425px */
+@media screen and (max-width: 425px) {
+    body > main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > main > section {
+        width: 100%;
+    }
+
+    body > main > section:nth-of-type(3) {
+        width: 100%;
+    }
+
+    body > header > nav {
         display: none;
     }
-    body>header>h1:last-child{
+
+    body > header > h1:last-child {
         display: block;
     }
 
-    body>footer{
+    body > main > section:first-child > div {
+        padding: 200px 8% 200px;
+    }
+
+    body > main > section:first-child > div > div > h1 {
+        font-size: 58px;
+    }
+
+    body > main > section:nth-of-type(2) form > div:first-child > ol > li > b {
+        font-size: 22px;
+    }
+
+    body > main > section:nth-of-type(2)>div>form>div:nth-child(2) button {
+        width: 150px;
+        height: 150px;
+    }
+
+    body > footer {
         padding: 1.5rem 5%;
     }
 
-    body>footer>nav>div:last-child{
+    body > footer > nav > div:last-child {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.8rem;
     }
 
-    body>footer>nav>div:last-child>h4{
+    body > footer > nav > div:last-child > h4 {
         margin-bottom: 0.5rem;
     }
 }

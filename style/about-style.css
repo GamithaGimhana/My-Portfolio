@@ -527,168 +527,273 @@ body>footer>nav>div:last-child>a:hover::after{
     width: 100%;
 }
 
-
-/*media*/
-@media screen and (max-width: 1024px) {
-    body > main > section:first-child> div > div:first-child > h1 {
-        font-size: 40px;
+/* Desktop Styles (1440px) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    body > main > section:first-child > div {
+        padding: 120px 10% 60px;
+        flex-direction: row;
+        text-align: left;
     }
 
-    body > main > section:nth-child(2)> div,
-    body > main > section:nth-child(3)> div {
-        padding: 60px 5%;
+    body > main > section:first-child > div > div:first-child > h1 {
+        font-size: 44px;
+    }
+
+    body > main > section:nth-child(2) > div {
+        padding: 80px 10%;
+        flex-direction: row;
+    }
+
+    body > main > section:nth-child(3) > div {
+        padding: 80px 10%;
+        flex-direction: row;
     }
 
     body > main > section:nth-child(4) > div {
-        padding: 5%;
+        padding: 6% 10%;
+        flex-direction: row;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:first-child > h2 {
-        font-size: 2rem;
+    body > header {
+        padding: 15px 10%;
+    }
+
+    body > footer {
+        padding: 40px 10%;
     }
 }
 
-@media screen and (max-width: 768px) {
-    body > main > section:first-child> div {
+/* Laptop Styles (1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    body > main > section:first-child > div {
+        padding: 100px 7% 50px;
         flex-direction: column;
-        padding: 80px 5% 40px;
         text-align: center;
     }
 
-    body > main > section:first-child> div > div:first-child {
-        margin-bottom: 40px;
+    body > main > section:first-child > div > div:first-child > h1 {
+        font-size: 40px;
     }
 
-    body > main > section:nth-child(2)> div {
+    body > main > section:nth-child(2) > div {
         flex-direction: column-reverse;
+        padding: 60px 7%;
     }
 
-    body > main > section:nth-child(2)> div > div:first-child {
+    body > main > section:nth-child(2) > div > div:first-child {
         padding-right: 0;
         margin-top: 40px;
+        text-align: center;
     }
 
-    body > main > section:nth-child(3)> div {
+    body > main > section:nth-child(3) > div {
         flex-direction: column;
+        padding: 60px 7%;
     }
 
-    body > main > section:nth-child(3)> div > div:first-child {
+    body > main > section:nth-child(3) > div > div:first-child {
         padding-right: 0;
         margin-bottom: 30px;
         text-align: center;
     }
 
-    body > main > section:nth-child(3)> div > div:first-child > h2::after {
+    body > main > section:nth-child(4) > div {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 6% 7%;
+    }
+
+    body > header {
+        padding: 12px 7%;
+    }
+
+    body > footer {
+        padding: 32px 7%;
+    }
+
+    body > header > nav {
+        gap: 30px;
+    }
+}
+
+/* Tablet Styles (768px) */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    body > main > section:first-child > div {
+        flex-direction: column;
+        padding: 80px 5% 40px;
+        text-align: center;
+    }
+
+    body > main > section:first-child > div > div:first-child {
+        margin-bottom: 40px;
+    }
+
+    body > main > section:nth-child(2) > div {
+        flex-direction: column-reverse;
+        padding: 50px 5%;
+    }
+
+    body > main > section:nth-child(2) > div > div:first-child {
+        padding-right: 0;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    body > main > section:nth-child(3) > div {
+        flex-direction: column;
+        padding: 50px 5%;
+    }
+
+    body > main > section:nth-child(3) > div > div:first-child {
+        padding-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    body > main > section:nth-child(3) > div > div:first-child > h2::after {
         left: 15%;
     }
 
     body > main > section:nth-child(4) > div {
         flex-direction: column;
         gap: 3rem;
+        padding: 5%;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child {
-        width: 100%;
+    body > header {
+        padding: 10px 5%;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:first-child {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 1rem;
+    body > footer {
+        padding: 25px 5%;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:nth-child(2) {
-        justify-content: center;
-    }
+    /*body > header > nav {*/
+    /*    display: none;*/
+    /*}*/
 
-    body > main > section:nth-child(4) > div > div:nth-child(2) {
-        width: 100%;
-    }
-
-    body>footer>nav{
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-    }
-
-    body>footer>nav>div:last-child{
-        width: 100%;
-        justify-content: flex-start;
-        gap: 1rem;
-    }
+    /*body > header > h1:last-child {*/
+    /*    display: block;*/
+    /*}*/
 }
 
-@media screen and (max-width: 480px) {
-    body>header>nav{
-        display: none;
-    }
-    body>header>h1:last-child{
-        display: block;
-    }
-
-    body > main > section:first-child> div > div:first-child > h1 {
-        font-size: 32px;
+/* Mobile Phone Styles (425px) */
+@media screen and (max-width: 425px) {
+    body > main > section:first-child > div {
+        flex-direction: column;
+        padding: 60px 4% 30px;
+        text-align: center;
     }
 
-    body > main > section:nth-child(2)> div > div:first-child > div:first-child > p {
-        font-size: 16px;
+    body > main > section:first-child > div > div:first-child {
+        margin-bottom: 40px;
     }
 
-    body > main > section:nth-child(3)> div > div:nth-child(2) > div {
+    body > main > section:nth-child(2) > div {
+        flex-direction: column-reverse;
+        padding: 40px 4%;
+    }
+
+    body > main > section:nth-child(2) > div > div:first-child {
+        padding-right: 0;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    body > main > section:nth-child(3) > div {
+        flex-direction: column;
+        padding: 40px 4%;
+    }
+
+    body > main > section:nth-child(3) > div > div:first-child {
+        padding-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    body > main > section:nth-child(3) > div > div:first-child > h2::after {
+        left: 15%;
+    }
+
+    body > main > section:nth-child(4) > div {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 4%;
+    }
+
+    body > main > section:first-child > div > div:first-child > h1 {
+        font-size: 28px;
+    }
+
+    body > main > section:nth-child(2) > div > div:first-child > div:first-child > p {
+        font-size: 15px;
+    }
+
+    body > main > section:nth-child(3) > div > div:nth-child(2) > div {
         flex-direction: column;
         gap: 15px;
     }
 
-    body > main > section:nth-child(3)> div > div:nth-child(2) > div:nth-child(even) {
+    body > main > section:nth-child(3) > div > div:nth-child(2) > div:nth-child(even) {
         flex-direction: column;
     }
 
-    body > main > section:nth-child(3)> div > div:nth-child(2) > div > div:first-child,
-    body > main > section:nth-child(3)> div > div:nth-child(2) > div > div:nth-child(2),
-    body > main > section:nth-child(3)> div > div:nth-child(2) > div:nth-child(even) > div:first-child,
-    body > main > section:nth-child(3)> div > div:nth-child(2) > div:nth-child(even) > div:nth-child(2) {
+    body > main > section:nth-child(3) > div > div:nth-child(2) > div > div:first-child,
+    body > main > section:nth-child(3) > div > div:nth-child(2) > div > div:nth-child(2),
+    body > main > section:nth-child(3) > div > div:nth-child(2) > div:nth-child(even) > div:first-child,
+    body > main > section:nth-child(3) > div > div:nth-child(2) > div:nth-child(even) > div:nth-child(2) {
         text-align: left;
     }
 
-    body>main>section:nth-child(4)>div>div>div:nth-child(2){
-        height: 35vh;
-    }
-
-    body>main>section:nth-child(4)>div>div>div:first-child>h2>a {
-        font-size: 32px;
+    body > main > section:nth-child(4) > div > div:first-child > div:first-child > h2 {
+        font-size: 1.6rem;
     }
 
     body > main > section:nth-child(4) > div > div:first-child > div:first-child > div {
-        width: 100px;
-        height: 100px;
-    }
-
-    body > main > section:nth-child(4) > div > div:first-child > div:first-child > h2 {
-        font-size: 1.8rem;
+        width: 90px;
+        height: 90px;
     }
 
     body > main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > button {
         width: 100%;
-        height: 80px;
+        height: 70px;
     }
 
     body > main > section:nth-child(4) > div > div:nth-child(2) > button {
-        width: 150px;
-        height: 150px;
+        width: 140px;
+        height: 140px;
     }
 
-    body>footer{
-        padding: 1.5rem 5%;
+    body > header {
+        padding: 8px 4%;
     }
 
-    body>footer>nav>div:last-child{
+    body > footer {
+        padding: 20px 4%;
+    }
+
+    body > header > nav {
+        display: none;
+    }
+
+    body > header > h1:last-child {
+        display: block;
+    }
+
+    body > footer > nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    body > footer > nav > div:last-child {
+        width: 100%;
         flex-direction: column;
         align-items: flex-start;
         gap: 0.8rem;
     }
 
-    body>footer>nav>div:last-child>h4{
+    body > footer > nav > div:last-child > h4 {
         margin-bottom: 0.5rem;
     }
 }

@@ -13,7 +13,7 @@ body{
 body>header{
     width: 100%;
     padding: 10px 5%;
-    position: fixed;
+    /*position: fixed;*/
     top: 0;
     z-index: 1;
     display: flex;
@@ -30,7 +30,7 @@ body>header>h1 {
 body>header>h1>a{
     font-size: 18px;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 body>header>h1:nth-child(2){
@@ -49,7 +49,7 @@ body>header>nav{
 body>header>nav>a{
     font-size: 18px;
     text-decoration: none;
-    color: black;
+    color: white;
     position: relative;
 }
 
@@ -57,7 +57,7 @@ body>header>nav>a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: black;
+    background: white;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -631,65 +631,114 @@ body>footer>nav>div:last-child>a:hover::after{
     width: 100%;
 }
 
-
-/*media*/
-@media screen and (max-width: 1024px) {
-    body > main > section:nth-child(4) > div {
-        padding: 5%;
+/* Desktop Styles (1440px) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    body > header {
+        padding: 10px 4%;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:first-child > h2 {
-        font-size: 2rem;
+    body > main > section:first-child > div > div:nth-child(4) > h1 {
+        font-size: 160px;
+    }
+
+    body > main > section:nth-child(2) > div {
+        padding: 10px 4%;
+    }
+
+    body > main > section:nth-child(2) > div > div:first-child > p {
+        font-size: 36px;
+    }
+
+    body > main > section:nth-child(3) > div > div > div:first-child > h2 > a {
+        font-size: 45px;
+    }
+
+    body > main > section:nth-child(4) > div {
+        padding: 5% 6%;
     }
 }
 
-@media screen and (max-width: 768px) {
-    body>main>section:first-child>div>h1{
+/* Laptop Styles (1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    body > header {
+        padding: 10px 3%;
+    }
+
+    body > main > section:first-child > div > div:nth-child(4) > h1 {
         font-size: 140px;
     }
 
-    /* About section */
-    body>main>section:nth-child(2)>div {
-        height: auto;
-        padding: 60px 5%;
+    body > main > section:nth-child(2) > div {
+        padding: 10px 3%;
     }
 
-    body>main>section:nth-child(2)>div>div:first-child {
-        flex-basis: 55%;
+    body > main > section:nth-child(2) > div > div:first-child > p {
+        font-size: 32px;
     }
 
-    body>main>section:nth-child(2)>div>div:nth-child(2) {
-        flex-basis: 40%;
-    }
-
-    body>main>section:nth-child(2)>div>div:first-child>p {
-        font-size: 30px;
-    }
-
-    /* Work section */
-    body>main>section:nth-child(3)>div>div>div:first-child>h2>a {
+    body > main > section:nth-child(3) > div > div > div:first-child > h2 > a {
         font-size: 40px;
     }
 
-    body>main>section:nth-child(3)>div>div {
+    body > main > section:nth-child(4) > div {
+        padding: 5% 4%;
+    }
+
+    body > main > section:nth-child(4) > div > div:first-child > div:first-child > h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Tablet Styles (768px) */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    body > header {
+        padding: 10px 2%;
+    }
+
+    body > main > section:first-child > div > h1 {
+        font-size: 140px;
+    }
+
+    body > main > section:nth-child(2) > div {
+        height: auto;
+        padding: 60px 2%;
+        flex-direction: column;
+    }
+
+    body > main > section:nth-child(2) > div > div:first-child,
+    body > main > section:nth-child(2) > div > div:nth-child(2) {
+        flex-basis: 100%;
+        padding: 20px 0;
+    }
+
+    body > main > section:nth-child(2) > div > div:first-child > p {
+        font-size: 28px;
+    }
+
+    body > main > section:nth-child(3) > div > div {
         height: auto;
         flex-direction: column;
     }
 
-    body>main>section:nth-child(3)>div>div>div:first-child,
-    body>main>section:nth-child(3)>div>div>div:nth-child(2),
-    body>main>section:nth-child(3)>div>div>div:last-child {
+    body > main > section:nth-child(3) > div > div > div:first-child,
+    body > main > section:nth-child(3) > div > div > div:nth-child(2),
+    body > main > section:nth-child(3) > div > div > div:last-child {
         width: 100%;
         padding: 15px;
     }
 
-    body>main>section:nth-child(3)>div>div>div:nth-child(2){
+    body > main > section:nth-child(3) > div > div > div:nth-child(2) {
         height: 35vh;
+    }
+
+    body > main > section:nth-child(3) > div > div > div:first-child > h2 > a {
+        font-size: 36px;
     }
 
     body > main > section:nth-child(4) > div {
         flex-direction: column;
         gap: 3rem;
+        padding: 5% 2%;
     }
 
     body > main > section:nth-child(4) > div > div:first-child {
@@ -711,71 +760,74 @@ body>footer>nav>div:last-child>a:hover::after{
         width: 100%;
     }
 
-    body>footer>nav{
+    body > footer > nav {
         flex-direction: column;
         align-items: flex-start;
         gap: 1.5rem;
     }
 
-    body>footer>nav>div:last-child{
+    body > footer > nav > div:last-child {
         width: 100%;
         justify-content: flex-start;
         gap: 1rem;
     }
 }
 
-@media screen and (max-width: 480px) {
-    body>header>nav{
+/* Mobile Phone Styles (425px) */
+@media screen and (max-width: 425px) {
+    body > header {
+        padding: 10px 1%;
+    }
+
+    body > header > nav {
         display: none;
     }
-    body>header>h1:last-child{
+
+    body > header > h1:last-child {
         display: block;
     }
 
-    /* About section */
-    body>main>section:nth-child(2)>div {
+    body > main > section:first-child > div > div:nth-child(4) > h1 {
+        font-size: 100px;
+    }
+
+    body > main > section:nth-child(2) > div > div:first-child > p {
+        font-size: 22px;
+    }
+
+    /* Work Section */
+    body > main > section:nth-child(3) > div {
+        width: 100%;
+        padding: 5%;
+        box-sizing: border-box;
+    }
+
+    body > main > section:nth-child(3) > div > div {
         height: auto;
         flex-direction: column;
-        padding: 40px 5%;
+        width: 100%;
     }
 
-    body>main>section:nth-child(2)>div>div:first-child,
-    body>main>section:nth-child(2)>div>div:nth-child(2) {
-        flex-basis: 100%;
-        padding: 20px 0;
+    body > main > section:nth-child(3) > div > div > div:first-child,
+    body > main > section:nth-child(3) > div > div > div:nth-child(2),
+    body > main > section:nth-child(3) > div > div > div:last-child {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
     }
 
-    body>main>section:nth-child(2)>div>div:first-child>p {
-        font-size: 24px;
+    body > main > section:nth-child(3) > div > div > div:nth-child(2) {
+        width: 100%;
+        max-width: 100%;
     }
 
-    /* Work section */
-    /*body>main>section:nth-child(3)>div>div {*/
-    /*    height: auto;*/
-    /*    flex-direction: column;*/
-    /*}*/
-
-    /*body>main>section:nth-child(3)>div>div>div:first-child,*/
-    /*body>main>section:nth-child(3)>div>div>div:nth-child(2),*/
-    /*body>main>section:nth-child(3)>div>div>div:last-child {*/
-    /*    width: 100%;*/
-    /*    padding: 15px;*/
-    /*}*/
-
-    /*body>main>section:nth-child(3)>div>div>div:nth-child(2){*/
-    /*    height: 35vh;*/
-    /*}*/
-
-    /*body>main>section:nth-child(3)>div>div>div:first-child>h2>a {*/
-    /*    font-size: 32px;*/
-    /*}*/
-
-    body>main>section:nth-child(4)>div>div>div:nth-child(2){
-        height: 35vh;
+    body > main > section:nth-child(3) > div > div > div:nth-child(2) img {
+        width: 100%;
+        max-width: 100%;
     }
 
-    body>main>section:nth-child(4)>div>div>div:first-child>h2>a {
-        font-size: 32px;
+    body > main > section:nth-child(3) > div > div > div:first-child > h2 > a {
+        font-size: 28px;
     }
 
     body > main > section:nth-child(4) > div > div:first-child > div:first-child > div {
@@ -784,30 +836,30 @@ body>footer>nav>div:last-child>a:hover::after{
     }
 
     body > main > section:nth-child(4) > div > div:first-child > div:first-child > h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     body > main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > button {
         width: 100%;
-        height: 80px;
+        height: 70px;
     }
 
     body > main > section:nth-child(4) > div > div:nth-child(2) > button {
-        width: 150px;
-        height: 150px;
+        width: 140px;
+        height: 140px;
     }
 
-    body>footer{
-        padding: 1.5rem 5%;
+    body > footer {
+        padding: 1.5rem 2%;
     }
 
-    body>footer>nav>div:last-child{
+    body > footer > nav > div:last-child {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.8rem;
     }
 
-    body>footer>nav>div:last-child>h4{
+    body > footer > nav > div:last-child > h4 {
         margin-bottom: 0.5rem;
     }
 }
