@@ -83,7 +83,7 @@ body>main>section{
 }
 
 body>main>section:first-child>div{
-    height: 120vh;
+    height: 105vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
