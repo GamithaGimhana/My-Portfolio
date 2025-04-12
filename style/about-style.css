@@ -191,26 +191,26 @@ body>main>section{
     margin-left: 10px;
 }
 
-body > main > section:nth-child(2)> div > div:first-child > div:nth-child(2) > ul > li {
+#skill-set>li{
     font-size: 16px;
     line-height: 2;
     color: #F5F5F5;
     transition: transform 0.3s ease;
 }
 
-body > main > section:nth-child(2)> div > div:first-child > div:nth-child(2) > ul > li:hover {
+#skill-set>li:hover{
     transform: translateX(5px);
     color: #455CE9;
 }
 
-body > main > section:nth-child(2)> div > div:nth-child(2) {
+#about-pic{
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-body > main > section:nth-child(2)> div > div:nth-child(2) > picture > img {
+#about-pic>picture>img{
     max-width: 100%;
     height: auto;
     border-radius: 10px;
@@ -218,25 +218,25 @@ body > main > section:nth-child(2)> div > div:nth-child(2) > picture > img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-body > main > section:nth-child(2)> div > div:nth-child(2) > picture > img:hover {
+#about-pic>picture>img:hover{
     transform: scale(1.02);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* Education Section */
-body > main > section:nth-child(3)> div {
+#edu-sec>div{
     display: flex;
     padding: 80px 8%;
     /*background: #141517;*/
     background: linear-gradient(to bottom, #1c1d20, #141517);
 }
 
-body > main > section:nth-child(3)> div > div:first-child {
+#edu-title{
     flex: 1;
     padding-right: 50px;
 }
 
-body > main > section:nth-child(3)> div > div:first-child > h2 {
+#edu-title>h2{
     font-size: 36px;
     color: #FFFFFF;
     position: relative;
@@ -244,7 +244,7 @@ body > main > section:nth-child(3)> div > div:first-child > h2 {
     margin-bottom: 50px;
 }
 
-body > main > section:nth-child(3)> div > div:first-child > h2::after {
+#edu-title>h2::after{
     content: '';
     position: absolute;
     width: 70%;
@@ -254,25 +254,25 @@ body > main > section:nth-child(3)> div > div:first-child > h2::after {
     left: 0;
 }
 
-body > main > section:nth-child(3)> div > div:nth-child(2) {
+#edu-places{
     flex: 2;
 }
 
-body > main > section:nth-child(3)> div > div:nth-child(2) > div {
+.edu{
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
 }
 
-body > main > section:nth-child(3)> div > div:nth-child(2) > div:nth-child(odd) {
+#edu-places>div:nth-child(odd){
     flex-direction: row;
 }
 
-body > main > section:nth-child(3)> div > div:nth-child(2) > div:nth-child(even) {
+#edu-places>div:nth-child(even){
     flex-direction: row-reverse;
 }
 
-body > main > section:nth-child(3)> div > div:nth-child(2) > div > div:first-child {
+.edu>div:first-child{
     flex: 3;
 }
 
