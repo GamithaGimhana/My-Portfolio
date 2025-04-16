@@ -137,7 +137,7 @@ body>main>section{
 }
 
 #hero-img>picture>img{
-    height: 1136px;
+    height: 850px;
     object-fit: contain;
     position: absolute;
     left: 50%;
