@@ -343,16 +343,12 @@ body>main>section{
 }
 
 .repo-link, .about-project{
-    width: 50%;
+    width: 25%;
     padding: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
-/*body>main>section:nth-child(3)>div>div>div:first-child>h2{*/
-/*    margin: 0 0 16px;*/
-/*}*/
 
 .repo-link>h2>a{
     color: #141517;
@@ -415,25 +411,12 @@ body>main>section{
     padding: 5% 8%;
     background: #141517;
     display: flex;
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
-    /*display: flex;*/
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 48px;
     flex-wrap: wrap;
 }
-
-/* Contact Content Container */
-/*body>main>section:nth-child(4)>div{*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*    gap: 48px;*/
-/*    flex-wrap: wrap;*/
-/*}*/
 
 /* Left Side Container */
 #contact-links{
@@ -471,7 +454,7 @@ body>main>section{
 }
 
 /* Profile Image */
-#contact-img>img{
+#contact-img>picture>img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -502,7 +485,6 @@ body>main>section{
     border-radius: 48px;
     cursor: pointer;
     transition: all 0.3s ease;
-    /*backdrop-filter: blur(5px);*/
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -563,7 +545,6 @@ body>main>section{
 #contact-sec>div>hr{
     width: 100%;
     height: 1px;
-    /*background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);*/
     background: #FFFFFF;
     border: none;
     margin-top: 48px;
@@ -638,140 +619,204 @@ body>main>section{
 
 /* Desktop Styles (1440px) */
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-    body > header {
+    #header {
         padding: 10px 4%;
     }
 
-    body > main > section:first-child > div > div:nth-child(4) > h1 {
+    #moving-name > h1 {
         font-size: 160px;
     }
 
-    body > main > section:nth-child(2) > div {
+    #about-sec > div {
         padding: 10px 4%;
     }
 
-    body > main > section:nth-child(2) > div > div:first-child > p {
+    #short-intro > p {
         font-size: 36px;
     }
 
-    body > main > section:nth-child(3) > div > div > div:first-child > h2 > a {
+    .repo-link > h2 > a {
         font-size: 45px;
     }
 
-    body > main > section:nth-child(4) > div {
+    #contact-sec > div {
         padding: 5% 6%;
     }
 }
 
 /* Laptop Styles (1024px) */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    body > header {
+    #header {
         padding: 10px 3%;
     }
 
-    body > main > section:first-child > div > div:nth-child(4) > h1 {
+    #moving-name > h1 {
         font-size: 140px;
     }
 
-    body > main > section:nth-child(2) > div {
+    #about-sec > div {
         padding: 10px 3%;
     }
 
-    body > main > section:nth-child(2) > div > div:first-child > p {
+    #short-intro > p {
         font-size: 32px;
     }
 
-    body > main > section:nth-child(3) > div > div > div:first-child > h2 > a {
+    .repo-link > h2 > a {
         font-size: 40px;
     }
 
-    body > main > section:nth-child(4) > div {
+    #contact-sec > div {
         padding: 5% 4%;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:first-child > h2 {
+    #heading-container > h2 {
         font-size: 2.2rem;
     }
 }
 
 /* Tablet Styles (768px) */
 @media screen and (min-width: 426px) and (max-width: 768px) {
-    body > header {
-        padding: 10px 2%;
+    /* Hero section adjustments */
+    #hero-sec>div {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 40px 0;
     }
 
-    body > main > section:first-child > div > h1 {
-        font-size: 140px;
+    /* Location adjustments for mobile */
+    #location {
+        position: relative;
+        width: 80%;
+        height: auto;
+        margin: 20px auto;
+        padding: 10px 20px;
+        border-radius: 50px;
+        justify-content: center;
+        order: 2;
     }
 
-    body > main > section:nth-child(2) > div {
+    #location>h4 {
+        font-size: 16px;
+        margin-right: 30px;
+    }
+
+    #location>picture>img {
+        width: 30px;
+        height: 30px;
+        right: 10px;
+    }
+
+    /* Role adjustments for mobile */
+    #role {
+        position: relative;
+        width: 80%;
+        margin: 20px auto;
+        order: 3;
+    }
+
+    #role>h4 {
+        font-size: 28px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Hero image adjustments */
+    #hero-img {
+        order: 1;
+        margin: 20px 0;
+    }
+
+    #hero-img>picture>img {
+        position: relative;
+        height: auto;
+        max-height: 60vh;
+        width: auto;
+        left: auto;
+        bottom: auto;
+        transform: none;
+    }
+
+    /* Moving name adjustments */
+    #moving-name {
+        order: 4;
+        margin-top: 20px;
+    }
+
+    #moving-name>h1 {
+        font-size: 60px;
+        position: relative;
+    }
+
+    #about-sec > div {
         height: auto;
         padding: 60px 2%;
         flex-direction: column;
     }
 
-    body > main > section:nth-child(2) > div > div:first-child,
-    body > main > section:nth-child(2) > div > div:nth-child(2) {
+    #short-intro,
+    #about-way {
         flex-basis: 100%;
         padding: 20px 0;
     }
 
-    body > main > section:nth-child(2) > div > div:first-child > p {
+    #short-intro > p {
         font-size: 28px;
     }
 
-    body > main > section:nth-child(3) > div > div {
+    .projects {
         height: auto;
         flex-direction: column;
     }
 
-    body > main > section:nth-child(3) > div > div > div:first-child,
-    body > main > section:nth-child(3) > div > div > div:nth-child(2),
-    body > main > section:nth-child(3) > div > div > div:last-child {
+    .repo-link,
+    .thumbnail,
+    .about-project {
         width: 100%;
         padding: 15px;
     }
 
-    body > main > section:nth-child(3) > div > div > div:nth-child(2) {
+    .thumbnail {
         height: 35vh;
     }
 
-    body > main > section:nth-child(3) > div > div > div:first-child > h2 > a {
+    .repo-link > h2 > a {
         font-size: 36px;
     }
 
-    body > main > section:nth-child(4) > div {
+    #contact-sec > div {
         flex-direction: column;
         gap: 3rem;
         padding: 5% 2%;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child {
+    #contact-links {
         width: 100%;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:first-child {
+    #heading-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 1rem;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:nth-child(2) {
+    #contact-ways {
         justify-content: center;
     }
 
-    body > main > section:nth-child(4) > div > div:nth-child(2) {
+    #contact-way {
         width: 100%;
     }
 
-    body > footer > nav {
+    #footer-nav {
         flex-direction: column;
         align-items: flex-start;
         gap: 1.5rem;
     }
 
-    body > footer > nav > div:last-child {
+    #socials {
         width: 100%;
         justify-content: flex-start;
         gap: 1rem;
@@ -780,91 +825,160 @@ body>main>section{
 
 /* Mobile Phone Styles (425px) */
 @media screen and (max-width: 425px) {
-    body > header {
+    #header {
         padding: 10px 1%;
     }
 
-    body > header > nav {
+    #nav-items {
         display: none;
     }
 
-    body > header > h1:last-child {
+    #header > h1:last-child {
         display: block;
     }
 
-    body > main > section:first-child > div > div:nth-child(4) > h1 {
-        font-size: 100px;
+    /* Hero section adjustments */
+    #hero-sec>div {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 40px 0;
     }
 
-    body > main > section:nth-child(2) > div > div:first-child > p {
+    /* Location adjustments for mobile */
+    #location {
+        position: relative;
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+        padding: 8px 15px;
+        border-radius: 50px;
+        justify-content: center;
+        order: 2;
+    }
+
+    #location>h4 {
+        font-size: 14px;
+        margin-right: 30px;
+    }
+
+    #location>picture>img {
+        width: 25px;
+        height: 25px;
+        right: 10px;
+    }
+
+    /* Role adjustments for mobile */
+    #role {
+        position: relative;
+        width: 90%;
+        margin: 20px auto;
+        order: 3;
+    }
+
+    #role>h4 {
+        font-size: 24px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Hero image adjustments */
+    #hero-img {
+        order: 1;
+        margin: 20px 0;
+    }
+
+    #hero-img>picture>img {
+        position: relative;
+        height: auto;
+        max-height: 50vh;
+        width: auto;
+        left: auto;
+        bottom: auto;
+        transform: none;
+    }
+
+    /* Moving name adjustments */
+    #moving-name {
+        order: 4;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+
+    #moving-name>h1 {
+        font-size: 40px;
+        position: relative;
+    }
+
+    #short-intro > p {
         font-size: 22px;
     }
 
     /* Work Section */
-    body > main > section:nth-child(3) > div {
+    #work-sec > div {
         width: 100%;
         padding: 5%;
         box-sizing: border-box;
     }
 
-    body > main > section:nth-child(3) > div > div {
+    .projects {
         height: auto;
         flex-direction: column;
         width: 100%;
     }
 
-    body > main > section:nth-child(3) > div > div > div:first-child,
-    body > main > section:nth-child(3) > div > div > div:nth-child(2),
-    body > main > section:nth-child(3) > div > div > div:last-child {
+    .repo-link,
+    .thumbnail,
+    .about-project {
         width: 100%;
         padding: 15px;
         box-sizing: border-box;
     }
 
-    body > main > section:nth-child(3) > div > div > div:nth-child(2) {
+    .thumbnail {
         width: 100%;
         max-width: 100%;
     }
 
-    body > main > section:nth-child(3) > div > div > div:nth-child(2) img {
+    .thumbnail img {
         width: 100%;
         max-width: 100%;
     }
 
-    body > main > section:nth-child(3) > div > div > div:first-child > h2 > a {
+    .repo-link > h2 > a {
         font-size: 28px;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:first-child > div {
+    #contact-img {
         width: 100px;
         height: 100px;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:first-child > h2 {
+    #heading-container > h2 {
         font-size: 1.6rem;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > button {
+    .contact-btns {
         width: 100%;
         height: 70px;
     }
 
-    body > main > section:nth-child(4) > div > div:nth-child(2) > button {
+    #contact-btn {
         width: 140px;
         height: 140px;
     }
 
-    body > footer {
+    #footer {
         padding: 1.5rem 2%;
     }
 
-    body > footer > nav > div:last-child {
+    #socials {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.8rem;
     }
 
-    body > footer > nav > div:last-child > h4 {
+    #socials > h4 {
         margin-bottom: 0.5rem;
     }
 }
