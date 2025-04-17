@@ -618,7 +618,8 @@ body>main>section{
 }
 
 /* Desktop Styles (1440px) */
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+/*@media screen and (min-width: 1025px) and (max-width: 1440px) {*/
+@media screen and (max-width: 1440px) {
     #header {
         padding: 10px 4%;
     }
@@ -645,7 +646,8 @@ body>main>section{
 }
 
 /* Laptop Styles (1024px) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+/*@media screen and (min-width: 769px) and (max-width: 1024px) {*/
+@media screen and (max-width: 1024px) {
     #header {
         padding: 10px 3%;
     }
@@ -676,7 +678,8 @@ body>main>section{
 }
 
 /* Tablet Styles (768px) */
-@media screen and (min-width: 426px) and (max-width: 768px) {
+/*@media screen and (min-width: 426px) and (max-width: 768px) {*/
+@media screen and (max-width: 768px) {
     /* Hero section adjustments */
     #hero-sec>div {
         display: flex;
