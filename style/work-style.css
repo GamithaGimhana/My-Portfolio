@@ -555,13 +555,13 @@ body>main>section{
         overflow-x: hidden;
     }
 
-    body > header {
-        padding: 10px 3%;
-    }
+    /*body > header {*/
+    /*    padding: 10px 3%;*/
+    /*}*/
 
-    body > header > nav {
-        gap: 20px;
-    }
+    /*body > header > nav {*/
+    /*    gap: 20px;*/
+    /*}*/
 
     body > main > section:first-child > div {
         height: 50vh;
