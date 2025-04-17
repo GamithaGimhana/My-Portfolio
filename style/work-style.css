@@ -13,7 +13,6 @@ body{
 #header{
     width: 100%;
     padding: 10px 5%;
-    /*position: fixed;*/
     top: 0;
     z-index: 1;
     display: flex;
@@ -106,9 +105,6 @@ body>main>section{
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    /*min-width: 200px;*/
-    /*top: 500px;*/
-    /*left: 1100px;*/
 }
 
 #work-sec>div{
@@ -173,10 +169,6 @@ body>main>section{
     justify-content: center;
 }
 
-/*body>main>section:nth-child(3)>div>div>div:first-child>h2{*/
-/*    margin: 0 0 16px;*/
-/*}*/
-
 .repo-link>h2>a{
     color: #141517;
     text-decoration: none;
@@ -202,8 +194,6 @@ body>main>section{
     align-items: center;
     background: none;
     box-shadow: none;
-    /*margin-top: 2rem;*/
-    /*margin-bottom: 2rem;*/
     transition: none;
 }
 
@@ -232,15 +222,11 @@ body>main>section{
     border: none;
 }
 
-/* Contact Section Container */
 #contact-sec>div{
     min-height: 80vh;
     padding: 5% 8%;
     background: #141517;
     display: flex;
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
-    /*display: flex;*/
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -248,17 +234,6 @@ body>main>section{
     flex-wrap: wrap;
 }
 
-/* Contact Content Container */
-/*body>main>section:nth-child(4)>div{*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*    gap: 48px;*/
-/*    flex-wrap: wrap;*/
-/*}*/
-
-/* Left Side Container */
 #contact-links{
     flex: 3;
     display: flex;
@@ -266,14 +241,12 @@ body>main>section{
     gap: 50px;
 }
 
-/* Profile Image and Heading Container */
 #heading-container{
     display: flex;
     align-items: center;
     gap: 32px;
 }
 
-/* Profile Image Container */
 #contact-img{
     background: linear-gradient(145deg, #999D9E, #b3b7b8);
     border-radius: 50%;
@@ -287,21 +260,18 @@ body>main>section{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Profile Image Container Hover Effect */
 #contact-img:hover{
     transform: scale(1.05);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Profile Image */
-#contact-img>img{
+#contact-img>picture>img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
 }
 
-/* Heading */
 #heading-container>h2{
     color: #FFFFFF;
     font-size: 40px;
@@ -310,14 +280,12 @@ body>main>section{
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Contact Buttons Container */
 #contact-ways{
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
 }
 
-/* Contact Buttons */
 .contact-btns{
     background: rgba(28, 29, 32, 0.7);
     padding: 20px 32px;
@@ -325,18 +293,15 @@ body>main>section{
     border-radius: 48px;
     cursor: pointer;
     transition: all 0.3s ease;
-    /*backdrop-filter: blur(5px);*/
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Contact Buttons Hover Effect */
 .contact-btns:hover{
     background: #455CE9;
     transform: translateY(-5px);
     border: none;
 }
 
-/* Contact Button Links */
 .contact-btns>a{
     color: #FFFFFF;
     text-decoration: none;
@@ -347,7 +312,6 @@ body>main>section{
     gap: 0.5rem;
 }
 
-/* Right Side Container */
 #contact-way{
     flex: 1;
     display: flex;
@@ -355,7 +319,6 @@ body>main>section{
     align-items: center;
 }
 
-/* Get in Touch Button */
 #contact-btn{
     background: #455CE9;
     border-radius: 50%;
@@ -368,13 +331,11 @@ body>main>section{
     overflow: hidden;
 }
 
-/* Get in Touch Button Hover Animation */
 #contact-btn:hover{
     background: #334BD3;
     transform: scale(1.05);
 }
 
-/* Get in Touch Button Link */
 #contact-btn>a{
     color: #FFFFFF;
     text-decoration: none;
@@ -382,11 +343,9 @@ body>main>section{
     position: relative;
 }
 
-/* Divider */
 #contact-sec>div>hr{
     width: 100%;
     height: 1px;
-    /*background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);*/
     background: #FFFFFF;
     border: none;
     margin-top: 48px;
@@ -466,35 +425,35 @@ body>main>section{
         overflow-x: hidden;
     }
 
-    body > header {
+    #header {
         padding: 10px 5%;
     }
 
-    body > main > section:first-child > div {
+    #hero-sec > div {
         height: 70vh;
         padding: 10px 5%;
     }
 
-    body > main > section:first-child > div > div:first-child > h1 {
+    #welcome-title > h1 {
         font-size: 70px;
     }
 
     /* Work Section */
-    body > main > section:nth-child(2) > div > div {
+    .projects {
         height: 40vh;
     }
 
-    body > main > section:nth-child(2) > div > div > div:first-child > h2 > a {
+    .repo-link > h2 > a {
         font-size: 45px;
     }
 
     /* Contact Section */
-    body > main > section:nth-child(3) > div {
+    #contact-sec > div {
         padding: 5% 8%;
         gap: 40px;
     }
 
-    body > main > section:nth-child(3) > div > div:first-child > div:first-child > h2 {
+    #heading-container > h2 {
         font-size: 35px;
     }
 }
@@ -506,44 +465,44 @@ body>main>section{
         overflow-x: hidden;
     }
 
-    body > header {
+    #header {
         padding: 10px 4%;
     }
 
-    body > main > section:first-child > div {
+    #hero-sec > div {
         height: 60vh;
         padding: 10px 4%;
     }
 
-    body > main > section:first-child > div > div:first-child > h1 {
+    #welcome-title > h1 {
         font-size: 60px;
     }
 
     /* Work Section */
-    body > main > section:nth-child(2) > div > div {
+    .projects {
         height: 35vh;
     }
 
-    body > main > section:nth-child(2) > div > div > div:first-child > h2 > a {
+    .repo-link > h2 > a {
         font-size: 40px;
     }
 
     /* Contact Section */
-    body > main > section:nth-child(3) > div {
+    #contact-sec > div {
         padding: 5% 6%;
         gap: 30px;
     }
 
-    body > main > section:nth-child(3) > div > div:first-child > div:first-child > h2 {
+    #heading-container > h2 {
         font-size: 30px;
     }
 
-    body > main > section:nth-child(3) > div > div:first-child > div:first-child > div {
+    #contact-img {
         width: 100px;
         height: 100px;
     }
 
-    body > main > section:nth-child(3) > div > div:first-child > div:nth-child(2) > button {
+    .contact-btns {
         padding: 15px 25px;
     }
 }
@@ -555,65 +514,57 @@ body>main>section{
         overflow-x: hidden;
     }
 
-    /*body > header {*/
-    /*    padding: 10px 3%;*/
-    /*}*/
-
-    /*body > header > nav {*/
-    /*    gap: 20px;*/
-    /*}*/
-
-    body > main > section:first-child > div {
+    #hero-sec > div {
         height: 50vh;
         flex-direction: column;
         justify-content: center;
         text-align: center;
     }
 
-    body > main > section:first-child > div > div:first-child > h1 {
+    #welcome-title > h1 {
         font-size: 48px;
     }
 
     /* Work Section */
-    body > main > section:nth-child(2) > div > div {
+    .projects {
         height: auto;
         flex-direction: column;
     }
 
-    body > main > section:nth-child(2) > div > div > div:first-child,
-    body > main > section:nth-child(2) > div > div > div:nth-child(2),
-    body > main > section:nth-child(2) > div > div > div:last-child {
+    .repo-link,
+    .thumbnail,
+    .about-project {
         width: 100%;
         padding: 15px;
     }
 
-    body > main > section:nth-child(2) > div > div > div:first-child > h2 > a {
+    .repo-link > h2 > a {
         font-size: 36px;
     }
 
     /* Contact Section */
-    body > main > section:nth-child(3) > div {
+    #contact-sec > div {
         flex-direction: column;
         gap: 2rem;
         padding: 5% 4%;
     }
 
-    body > main > section:nth-child(3) > div > div:first-child {
+    #contact-links {
         width: 100%;
         align-items: center;
     }
 
-    body > main > section:nth-child(3) > div > div:first-child > div:first-child {
+    #heading-container {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
     }
 
-    body > main > section:nth-child(3) > div > div:first-child > div:first-child > h2 {
+    #heading-container > h2 {
         font-size: 28px;
     }
 
-    body > footer > nav {
+    #footer-nav {
         flex-direction: column;
         align-items: flex-start;
         gap: 1.5rem;
@@ -629,17 +580,17 @@ body>main>section{
         overflow-x: hidden;
     }
 
-    body > header {
+    #header {
         width: 100%;
         padding: 10px 3%;
         box-sizing: border-box;
     }
 
-    body > header > nav {
+    #nav-items {
         display: none;
     }
 
-    body > header > h1:last-child {
+    #header > h1:last-child {
         display: block;
     }
 
@@ -657,7 +608,7 @@ body>main>section{
         box-sizing: border-box;
     }
 
-    body > main > section:first-child > div {
+    #hero-sec > div {
         height: 50vh;
         flex-direction: column;
         justify-content: center;
@@ -667,47 +618,47 @@ body>main>section{
         box-sizing: border-box;
     }
 
-    body > main > section:first-child > div > div:first-child > h1 {
+    #welcome-title > h1 {
         font-size: 26px;
     }
 
     /* Work Section */
-    body > main > section:nth-child(2) > div {
+    #work-sec > div {
         width: 100%;
         padding: 5%;
         box-sizing: border-box;
     }
 
-    body > main > section:nth-child(2) > div > div {
+    .projects {
         height: auto;
         flex-direction: column;
         width: 100%;
     }
 
-    body > main > section:nth-child(2) > div > div > div:first-child,
-    body > main > section:nth-child(2) > div > div > div:nth-child(2),
-    body > main > section:nth-child(2) > div > div > div:last-child {
+    .repo-link,
+    .thumbnail,
+    .about-project {
         width: 100%;
         padding: 15px;
         box-sizing: border-box;
     }
 
-    body > main > section:nth-child(2) > div > div > div:nth-child(2) {
+    .thumbnail {
         width: 100%;
         max-width: 100%;
     }
 
-    body > main > section:nth-child(2) > div > div > div:nth-child(2) img {
+    .thumbnail img {
         width: 100%;
         max-width: 100%;
     }
 
-    body > main > section:nth-child(2) > div > div > div:first-child > h2 > a {
+    .repo-link > h2 > a {
         font-size: 28px;
     }
 
     /* Contact Section */
-    body > main > section:nth-child(3) > div {
+    #contact-sec > div {
         flex-direction: column;
         gap: 2rem;
         padding: 5% 4%;
@@ -715,51 +666,51 @@ body>main>section{
         box-sizing: border-box;
     }
 
-    body > main > section:nth-child(3) > div > div:first-child {
+    #contact-links {
         width: 100%;
         align-items: center;
     }
 
-    body > main > section:nth-child(3) > div > div:first-child > div:first-child {
+    #heading-container {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
     }
 
-    body > main > section:nth-child(3) > div > div:first-child > div:first-child > div {
+    #contact-img {
         width: 90px;
         height: 90px;
     }
 
-    body > main > section:nth-child(3) > div > div:first-child > div:first-child > h2 {
+    #heading-container > h2 {
         font-size: 24px;
     }
 
-    body > main > section:nth-child(3) > div > div:first-child > div:nth-child(2) > button {
+    .contact-btns {
         width: 100%;
         padding: 12px 20px;
     }
 
-    body > main > section:nth-child(3) > div > div:nth-child(2) > button {
+    #contact-btn {
         width: 130px;
         height: 130px;
     }
 
-    body > footer {
+    #footer {
         width: 100%;
         margin: 0;
         padding: 1.5rem 3%;
         box-sizing: border-box;
     }
 
-    body > footer > nav {
+    #footer-nav {
         flex-direction: column;
         align-items: flex-start;
         gap: 1.5rem;
         width: 100%;
     }
 
-    body > footer > nav > div:last-child {
+    #socials {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.8rem;
