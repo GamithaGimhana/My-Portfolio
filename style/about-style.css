@@ -515,7 +515,8 @@ body>main>section{
 }
 
 /* Desktop Styles (1440px) */
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+/*@media screen and (min-width: 1025px) and (max-width: 1440px) {*/
+@media screen and (max-width: 1440px) {
     #hero-sec > div {
         padding: 120px 10% 60px;
         flex-direction: row;
@@ -551,7 +552,8 @@ body>main>section{
 }
 
 /* Laptop Styles (1024px) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+/*@media screen and (min-width: 769px) and (max-width: 1024px) {*/
+@media screen and (max-width: 1024px) {
     #hero-sec > div {
         padding: 100px 7% 50px;
         flex-direction: column;
@@ -604,7 +606,8 @@ body>main>section{
 }
 
 /* Tablet Styles (768px) */
-@media screen and (min-width: 426px) and (max-width: 768px) {
+/*@media screen and (min-width: 426px) and (max-width: 768px) {*/
+@media screen and (max-width: 768px) {
     #hero-sec > div {
         flex-direction: column;
         padding: 80px 5% 40px;
