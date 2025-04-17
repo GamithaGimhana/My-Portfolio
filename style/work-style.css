@@ -419,7 +419,8 @@ body>main>section{
 }
 
 /* Desktop - 1440px */
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+/*@media screen and (min-width: 1025px) and (max-width: 1440px) {*/
+@media screen and (max-width: 1440px) {
     body {
         width: 100%;
         overflow-x: hidden;
@@ -459,7 +460,8 @@ body>main>section{
 }
 
 /* Laptop - 1024px */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+/*@media screen and (min-width: 769px) and (max-width: 1024px) {*/
+@media screen and (max-width: 1024px) {
     body {
         width: 100%;
         overflow-x: hidden;
@@ -508,7 +510,8 @@ body>main>section{
 }
 
 /* Tablet - 768px */
-@media screen and (min-width: 426px) and (max-width: 768px) {
+/*@media screen and (min-width: 426px) and (max-width: 768px) {*/
+@media screen and (max-width: 768px) {
     body {
         width: 100%;
         overflow-x: hidden;
