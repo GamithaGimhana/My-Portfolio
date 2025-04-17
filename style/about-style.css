@@ -276,12 +276,12 @@ body>main>section{
     flex: 3;
 }
 
-body > main > section:nth-child(3)> div > div:nth-child(2) > div > div:nth-child(2) {
+.edu> div > div:nth-child(2) > div > div:nth-child(2) {
     flex: 1;
     text-align: right;
 }
 
-body > main > section:nth-child(3)> div > div:nth-child(2) > div:nth-child(even) > div:first-child {
+.edu> div > div:nth-child(2) > div:nth-child(even) > div:first-child {
     text-align: right;
 }
 
