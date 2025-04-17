@@ -34,27 +34,24 @@ body>header>h1>a{
     color: white;
 }
 
-body>header>h1:nth-child(2){
+body>header>h1:nth-child(3){
     display: none;
-    position: absolute;
-    left: 60px;
-    top: 10px;
 }
 
-body>header>nav{
+#nav-items{
     display: flex;
     list-style: none;
     gap: 40px;
 }
 
-body>header>nav>a{
+#nav-items>a{
     font-size: 18px;
     text-decoration: none;
     color: white;
     position: relative;
 }
 
-body>header>nav>a::after{
+#nav-items>a::after{
     content: '';
     width: 0;
     height: 3px;
@@ -65,12 +62,8 @@ body>header>nav>a::after{
     transition: 0.5s;
 }
 
-body>header>nav>a:hover::after{
+#nav-items>a:hover::after{
     width: 100%;
-}
-
-body>header>h1:last-child{
-    display: none;
 }
 
 body>main{
@@ -276,48 +269,43 @@ body>main>section{
     flex: 3;
 }
 
-.edu> div > div:nth-child(2) > div > div:nth-child(2) {
+.edu>div:nth-child(2){
     flex: 1;
     text-align: right;
 }
 
-.edu> div > div:nth-child(2) > div:nth-child(even) > div:first-child {
+#edu-places>#edu-cmjd>div:first-child,
+#edu-places>#edu-gdse>div:first-child{
     text-align: right;
 }
 
-body > main > section:nth-child(3)> div > div:nth-child(2) > div:nth-child(even) > div:nth-child(2) {
+#edu-places>#edu-cmjd>div:nth-child(2),
+#edu-places>#edu-gdse>div:nth-child(2){
     text-align: left;
 }
 
-body > main > section:nth-child(3)> div > div:nth-child(2) > div h4 {
+#edu-places .edu h4{
     font-size: 20px;
     margin-bottom: 8px;
     color: #FFFFFF;
 }
 
-body > main > section:nth-child(3)> div > div:nth-child(2) > div p {
+#edu-places .edu p{
     font-size: 16px;
     color: #999D9E;
 }
 
-body > main > section:nth-child(3)> div > div:nth-child(2) > hr {
+#edu-places hr{
     border: none;
     height: 1px;
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Contact Section Container */
-body>main>section:nth-child(4)>div{
+/* Contact Section */
+#contact-sec>div{
     min-height: 80vh;
     padding: 5% 8%;
     background: #141517;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Contact Content Container */
-body>main>section:nth-child(4)>div{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -326,23 +314,23 @@ body>main>section:nth-child(4)>div{
     flex-wrap: wrap;
 }
 
-/* Left Side Container */
-body>main>section:nth-child(4)>div>div:first-child{
+/* Contact Left Side */
+#contact-links{
     flex: 3;
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
 
-/* Profile Image and Heading Container */
-body>main>section:nth-child(4)>div>div:first-child>div:first-child{
+/* Heading Container */
+#heading-container{
     display: flex;
     align-items: center;
     gap: 32px;
 }
 
 /* Profile Image Container */
-body>main>section:nth-child(4)>div>div:first-child>div:first-child>div{
+#contact-img{
     background: linear-gradient(145deg, #999D9E, #b3b7b8);
     border-radius: 50%;
     width: 120px;
@@ -356,13 +344,13 @@ body>main>section:nth-child(4)>div>div:first-child>div:first-child>div{
 }
 
 /* Profile Image Container Hover Effect */
-body>main>section:nth-child(4)>div>div:first-child>div:first-child>div:hover{
+#contact-img:hover{
     transform: scale(1.05);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Profile Image */
-body>main>section:nth-child(4)>div>div:first-child>div:first-child>div>img{
+#contact-img picture img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -370,7 +358,7 @@ body>main>section:nth-child(4)>div>div:first-child>div:first-child>div>img{
 }
 
 /* Heading */
-body>main>section:nth-child(4)>div>div:first-child>div:first-child>h2{
+#heading-container h2{
     color: #FFFFFF;
     font-size: 40px;
     font-weight: 700;
@@ -379,33 +367,32 @@ body>main>section:nth-child(4)>div>div:first-child>div:first-child>h2{
 }
 
 /* Contact Buttons Container */
-body>main>section:nth-child(4)>div>div:first-child>div:nth-child(2){
+#contact-ways{
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
 }
 
 /* Contact Buttons */
-body>main>section:nth-child(4)>div>div:first-child>div:nth-child(2)>button{
+.contact-btns{
     background: rgba(28, 29, 32, 0.7);
     padding: 20px 32px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 48px;
     cursor: pointer;
     transition: all 0.3s ease;
-    /*backdrop-filter: blur(5px);*/
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact Buttons Hover Effect */
-body>main>section:nth-child(4)>div>div:first-child>div:nth-child(2)>button:hover{
+.contact-btns:hover{
     background: #455CE9;
     transform: translateY(-5px);
     border: none;
 }
 
 /* Contact Button Links */
-body>main>section:nth-child(4)>div>div:first-child>div:nth-child(2)>button>a{
+.contact-btns>a{
     color: #FFFFFF;
     text-decoration: none;
     font-size: 16px;
@@ -416,7 +403,7 @@ body>main>section:nth-child(4)>div>div:first-child>div:nth-child(2)>button>a{
 }
 
 /* Right Side Container */
-body>main>section:nth-child(4)>div>div:nth-child(2){
+#contact-way{
     flex: 1;
     display: flex;
     justify-content: center;
@@ -424,7 +411,7 @@ body>main>section:nth-child(4)>div>div:nth-child(2){
 }
 
 /* Get in Touch Button */
-body>main>section:nth-child(4)>div>div:nth-child(2)>button{
+#contact-btn{
     background: #455CE9;
     border-radius: 50%;
     width: 180px;
@@ -437,13 +424,13 @@ body>main>section:nth-child(4)>div>div:nth-child(2)>button{
 }
 
 /* Get in Touch Button Hover Animation */
-body>main>section:nth-child(4)>div>div:nth-child(2)>button:hover{
+#contact-btn:hover{
     background: #334BD3;
     transform: scale(1.05);
 }
 
 /* Get in Touch Button Link */
-body>main>section:nth-child(4)>div>div:nth-child(2)>button>a{
+#contact-btn>a{
     color: #FFFFFF;
     text-decoration: none;
     font-size: 20px;
@@ -451,22 +438,22 @@ body>main>section:nth-child(4)>div>div:nth-child(2)>button>a{
 }
 
 /* Divider */
-body>main>section:nth-child(4)>div>hr{
+#contact-sec>div>hr{
     width: 100%;
     height: 1px;
-    /*background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);*/
     background: #FFFFFF;
     border: none;
     margin-top: 48px;
 }
 
-body>footer{
+/* Footer */
+#footer{
     background: #141517;
     padding: 32px 8%;
     color: #FFFFFF;
 }
 
-body>footer>nav{
+#footer-nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -474,7 +461,7 @@ body>footer>nav{
     gap: 32px;
 }
 
-body>footer>nav>div:first-child>a{
+#s-logo>a{
     color: #FFFFFF;
     text-decoration: none;
     font-size: 20px;
@@ -483,24 +470,24 @@ body>footer>nav>div:first-child>a{
     display: inline-block;
 }
 
-body>footer>nav>div:first-child>a:hover{
+#s-logo>a:hover{
     opacity: 1;
     transform: translateY(-2px);
 }
 
-body>footer>nav>div:last-child{
+#socials{
     display: flex;
     align-items: center;
     gap: 24px;
     flex-wrap: wrap;
 }
 
-body>footer>nav>div:last-child>h4{
+#socials>h4{
     font-size: 14px;
     color: #999D9E;
 }
 
-body>footer>nav>div:last-child>a{
+#socials>a{
     color: #FFFFFF;
     text-decoration: none;
     font-size: 16px;
@@ -508,7 +495,7 @@ body>footer>nav>div:last-child>a{
     transition: color 0.3s ease;
 }
 
-body>footer>nav>div:last-child>a::after{
+#socials>a::after{
     content: '';
     position: absolute;
     width: 0;
@@ -519,37 +506,37 @@ body>footer>nav>div:last-child>a::after{
     transition: width 0.3s ease;
 }
 
-body>footer>nav>div:last-child>a:hover{
+#socials>a:hover{
     color: #455CE9;
 }
 
-body>footer>nav>div:last-child>a:hover::after{
+#socials>a:hover::after{
     width: 100%;
 }
 
 /* Desktop Styles (1440px) */
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-    body > main > section:first-child > div {
+    #hero-sec > div {
         padding: 120px 10% 60px;
         flex-direction: row;
         text-align: left;
     }
 
-    body > main > section:first-child > div > div:first-child > h1 {
+    #welcome-title > h1 {
         font-size: 44px;
     }
 
-    body > main > section:nth-child(2) > div {
+    #summary-sec > div {
         padding: 80px 10%;
         flex-direction: row;
     }
 
-    body > main > section:nth-child(3) > div {
+    #edu-sec > div {
         padding: 80px 10%;
         flex-direction: row;
     }
 
-    body > main > section:nth-child(4) > div {
+    #contact-sec > div {
         padding: 6% 10%;
         flex-direction: row;
     }
@@ -558,46 +545,46 @@ body>footer>nav>div:last-child>a:hover::after{
         padding: 15px 10%;
     }
 
-    body > footer {
+    #footer {
         padding: 40px 10%;
     }
 }
 
 /* Laptop Styles (1024px) */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    body > main > section:first-child > div {
+    #hero-sec > div {
         padding: 100px 7% 50px;
         flex-direction: column;
         text-align: center;
     }
 
-    body > main > section:first-child > div > div:first-child > h1 {
+    #welcome-title > h1 {
         font-size: 40px;
     }
 
-    body > main > section:nth-child(2) > div {
+    #summary-sec > div {
         flex-direction: column-reverse;
         padding: 60px 7%;
     }
 
-    body > main > section:nth-child(2) > div > div:first-child {
+    #summary-sec > div > div:first-child {
         padding-right: 0;
         margin-top: 40px;
         text-align: center;
     }
 
-    body > main > section:nth-child(3) > div {
+    #edu-sec > div {
         flex-direction: column;
         padding: 60px 7%;
     }
 
-    body > main > section:nth-child(3) > div > div:first-child {
+    #edu-title {
         padding-right: 0;
         margin-bottom: 30px;
         text-align: center;
     }
 
-    body > main > section:nth-child(4) > div {
+    #contact-sec > div {
         flex-direction: column;
         gap: 3rem;
         padding: 6% 7%;
@@ -607,54 +594,54 @@ body>footer>nav>div:last-child>a:hover::after{
         padding: 12px 7%;
     }
 
-    body > footer {
+    #footer {
         padding: 32px 7%;
     }
 
-    body > header > nav {
+    #nav-items {
         gap: 30px;
     }
 }
 
 /* Tablet Styles (768px) */
 @media screen and (min-width: 426px) and (max-width: 768px) {
-    body > main > section:first-child > div {
+    #hero-sec > div {
         flex-direction: column;
         padding: 80px 5% 40px;
         text-align: center;
     }
 
-    body > main > section:first-child > div > div:first-child {
+    #welcome-title {
         margin-bottom: 40px;
     }
 
-    body > main > section:nth-child(2) > div {
+    #summary-sec > div {
         flex-direction: column-reverse;
         padding: 50px 5%;
     }
 
-    body > main > section:nth-child(2) > div > div:first-child {
+    #summary-sec > div > div:first-child {
         padding-right: 0;
         margin-top: 40px;
         text-align: center;
     }
 
-    body > main > section:nth-child(3) > div {
+    #edu-sec > div {
         flex-direction: column;
         padding: 50px 5%;
     }
 
-    body > main > section:nth-child(3) > div > div:first-child {
+    #edu-title {
         padding-right: 0;
         margin-bottom: 30px;
         text-align: center;
     }
 
-    body > main > section:nth-child(3) > div > div:first-child > h2::after {
+    #edu-title > h2::after {
         left: 15%;
     }
 
-    body > main > section:nth-child(4) > div {
+    #contact-sec > div {
         flex-direction: column;
         gap: 3rem;
         padding: 5%;
@@ -664,11 +651,11 @@ body>footer>nav>div:last-child>a:hover::after{
         padding: 10px 5%;
     }
 
-    body > footer {
+    #footer {
         padding: 25px 5%;
     }
 
-    /*body > header > nav {*/
+    /*#nav-items {*/
     /*    display: none;*/
     /*}*/
 
@@ -679,87 +666,89 @@ body>footer>nav>div:last-child>a:hover::after{
 
 /* Mobile Phone Styles (425px) */
 @media screen and (max-width: 425px) {
-    body > main > section:first-child > div {
+    #hero-sec > div {
         flex-direction: column;
         padding: 60px 4% 30px;
         text-align: center;
     }
 
-    body > main > section:first-child > div > div:first-child {
+    #welcome-title {
         margin-bottom: 40px;
     }
 
-    body > main > section:nth-child(2) > div {
+    #summary-sec > div {
         flex-direction: column-reverse;
         padding: 40px 4%;
     }
 
-    body > main > section:nth-child(2) > div > div:first-child {
+    #summary-sec > div > div:first-child {
         padding-right: 0;
         margin-top: 40px;
         text-align: center;
     }
 
-    body > main > section:nth-child(3) > div {
+    #edu-sec > div {
         flex-direction: column;
         padding: 40px 4%;
     }
 
-    body > main > section:nth-child(3) > div > div:first-child {
+    #edu-title {
         padding-right: 0;
         margin-bottom: 30px;
         text-align: center;
     }
 
-    body > main > section:nth-child(3) > div > div:first-child > h2::after {
+    #edu-title > h2::after {
         left: 15%;
     }
 
-    body > main > section:nth-child(4) > div {
+    #contact-sec > div {
         flex-direction: column;
         gap: 3rem;
         padding: 4%;
     }
 
-    body > main > section:first-child > div > div:first-child > h1 {
+    #welcome-title > h1 {
         font-size: 28px;
     }
 
-    body > main > section:nth-child(2) > div > div:first-child > div:first-child > p {
+    #about-me > p {
         font-size: 15px;
     }
 
-    body > main > section:nth-child(3) > div > div:nth-child(2) > div {
+    #edu-al, #edu-cmjd, #edu-aq, #edu-gdse {
         flex-direction: column;
         gap: 15px;
     }
 
-    body > main > section:nth-child(3) > div > div:nth-child(2) > div:nth-child(even) {
+    #edu-cmjd, #edu-gdse {
         flex-direction: column;
     }
 
-    body > main > section:nth-child(3) > div > div:nth-child(2) > div > div:first-child,
-    body > main > section:nth-child(3) > div > div:nth-child(2) > div > div:nth-child(2),
-    body > main > section:nth-child(3) > div > div:nth-child(2) > div:nth-child(even) > div:first-child,
-    body > main > section:nth-child(3) > div > div:nth-child(2) > div:nth-child(even) > div:nth-child(2) {
+    .edu > div:first-child,
+    .edu > div:nth-child(2),
+    #edu-places > #edu-cmjd > div:first-child,
+    #edu-places > #edu-cmjd > div:nth-child(2),
+    #edu-places > #edu-gdse > div:first-child,
+    #edu-places > #edu-gdse > div:nth-child(2) {
         text-align: left;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:first-child > h2 {
+    #heading-container > h2 {
         font-size: 1.6rem;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:first-child > div {
+    #contact-img {
         width: 90px;
         height: 90px;
     }
 
-    body > main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > button {
+    .contact-btns {
         width: 100%;
         height: 70px;
     }
 
-    body > main > section:nth-child(4) > div > div:nth-child(2) > button {
+    #contact-btn {
         width: 140px;
         height: 140px;
     }
@@ -768,32 +757,32 @@ body>footer>nav>div:last-child>a:hover::after{
         padding: 8px 4%;
     }
 
-    body > footer {
+    #footer {
         padding: 20px 4%;
     }
 
-    body > header > nav {
+    #nav-items {
         display: none;
     }
 
-    body > header > h1:last-child {
+    body > header > h1:nth-child(3) {
         display: block;
     }
 
-    body > footer > nav {
+    #footer-nav {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
     }
 
-    body > footer > nav > div:last-child {
+    #socials {
         width: 100%;
         flex-direction: column;
         align-items: flex-start;
         gap: 0.8rem;
     }
 
-    body > footer > nav > div:last-child > h4 {
+    #socials > h4 {
         margin-bottom: 0.5rem;
     }
 }
