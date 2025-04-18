@@ -10,7 +10,7 @@ body{
     box-sizing: border-box;
 }
 
-body>header{
+#header{
     width: 100%;
     padding: 10px 5%;
     /*position: fixed;*/
@@ -22,39 +22,39 @@ body>header{
     background: #141517;
 }
 
-body>header>h1 {
+#header>h1{
     display: flex;
     align-items: center;
     position: relative;
 }
 
-body>header>h1>a{
+#header>h1>a{
     font-size: 18px;
     text-decoration: none;
     color: white;
 }
 
-body>header>h1:nth-child(2){
+#header>h1:nth-child(2){
     display: none;
     position: absolute;
     left: 60px;
     top: 10px;
 }
 
-body>header>nav{
+#nav-items{
     display: flex;
     list-style: none;
     gap: 40px;
 }
 
-body>header>nav>a{
+#nav-items>a{
     font-size: 18px;
     text-decoration: none;
     color: white;
     position: relative;
 }
 
-body>header>nav>a::after{
+#nav-items>a::after{
     content: '';
     width: 0;
     height: 3px;
@@ -65,15 +65,15 @@ body>header>nav>a::after{
     transition: 0.5s;
 }
 
-body>header>nav>a:hover::after{
+#nav-items>a:hover::after{
     width: 100%;
 }
 
-body>header>h1:last-child{
+#header>h1:last-child{
     display: none;
 }
 
-body>main{
+main{
     width: 100%;
     box-sizing: border-box;
     position: relative;
@@ -81,15 +81,15 @@ body>main{
     flex-wrap: wrap;
 }
 
-body>main>section{
+main>section{
     width: 70%;
 }
 
-body > main > section:first-child{
+#hero-sec{
     width: 100%;
 }
 
-body > main > section:first-child > div{
+#hero-sec>div{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,7 +97,7 @@ body > main > section:first-child > div{
     background: linear-gradient(to bottom, #141517, #1c1d20);
 }
 
-body > main > section:first-child> div > div > h1 {
+#welcome-title>h1{
     font-size: 68px;
     font-weight: 700;
     line-height: 1.2;
@@ -106,12 +106,12 @@ body > main > section:first-child> div > div > h1 {
 }
 
 /* Form section */
-body > main > section:nth-of-type(2) {
+#contact-form-sec{
     padding: 10px 5%;
     background: linear-gradient(to bottom, #1c1d20, #141517);
 }
 
-body > main > section:nth-of-type(2) > div {
+#contact-form-sec>div{
     border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -119,32 +119,32 @@ body > main > section:nth-of-type(2) > div {
     transition: all 0.3s ease;
 }
 
-body > main > section:nth-of-type(2) > div:hover {
+#contact-form-sec>div:hover{
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-body > main > section:nth-of-type(2) form {
+#contact-form{
     width: 100%;
     padding: 10px 5%;
 }
 
-body > main > section:nth-of-type(2) form > div:first-child > ol {
+#contact-form>div:first-child>#form-ques{
     list-style-position: inside;
 }
 
-body > main > section:nth-of-type(2) form > div:first-child > ol > hr {
+#contact-form>div:first-child>#form-ques>hr{
     border: none;
     height: 1px;
     background-color: #444;
     margin: 0.75rem 0;
 }
 
-body > main > section:nth-of-type(2) form > div:first-child > ol > li {
+#form-ques>.questions{
     margin-bottom: 1.5rem;
 }
 
-body > main > section:nth-of-type(2) form > div:first-child > ol > li > b {
+#form-ques>.questions>b{
     display: block;
     /*margin: 0.5rem 0;*/
     font-size: 24px;
@@ -152,15 +152,15 @@ body > main > section:nth-of-type(2) form > div:first-child > ol > li > b {
     padding-top: 1.66em;
 }
 
-body > main > section:nth-of-type(2) form > div:first-child > ol > li > hr {
+#form-ques>.questions>hr{
     border: none;
     height: 1px;
     background-color: #444;
     margin: 0.75rem 0;
 }
 
-body > main > section:nth-of-type(2) form input,
-body > main > section:nth-of-type(2) form textarea {
+#contact-form input,
+#contact-form textarea{
     width: 100%;
     padding: 0.75rem 0;
     font-size: 1rem;
@@ -170,25 +170,25 @@ body > main > section:nth-of-type(2) form textarea {
     outline: none;
 }
 
-body > main > section:nth-of-type(2) form input::placeholder,
-body > main > section:nth-of-type(2) form textarea::placeholder {
+#contact-form input::placeholder,
+#contact-form textarea::placeholder{
     color: #999;
     opacity: 0.7;
     font-size: 20px;
 }
 
-body > main > section:nth-of-type(2) form textarea {
+#contact-form textarea{
     min-height: 80px;
     resize: vertical;
 }
 
-body > main > section:nth-of-type(2)>div>form>div:nth-child(2) {
+#ans-send-btn{
     display: flex;
     justify-content: flex-end; /* Aligns the button to the right */
     margin-top: 1rem; /* Adds some space above the button */
 }
 
-body > main > section:nth-of-type(2)>div>form>div:nth-child(2) button {
+#ans-send-btn button{
     background: #455CE9;
     border-radius: 50%;
     width: 180px;
@@ -203,12 +203,12 @@ body > main > section:nth-of-type(2)>div>form>div:nth-child(2) button {
     font-size: 20px;
 }
 
-body > main > section:nth-of-type(2)>div>form>div:nth-child(2) button:hover{
+#ans-send-btn button:hover{
     background: #334BD3;
     transform: scale(1.05);
 }
 
-body > main> section:nth-child(2) form hr{
+#contact-form hr{
     border: none;
     height: 1px;
     background-color: #444;
@@ -216,28 +216,29 @@ body > main> section:nth-child(2) form hr{
 }
 
 /* Contact Details Section */
-body > main > section:nth-of-type(3) {
+#contact-detail-sec{
     width: 30%;
     padding: 20px 5%;
     background: linear-gradient(to bottom, #1c1d20, #141517);
     /*border-left: 4px solid #455CE9;*/
 }
 
-body > main > section:nth-of-type(3)>div>div{
+#contact-detail-sec>div>div{
     margin: 50px 50px 50px 2px;
 }
 
-body > main > section:nth-of-type(3) picture img {
+#contact-img picture img{
     border-radius: 50%;
     border: 3px solid #455CE9;
     transition: transform 0.3s ease;
 }
 
-body > main > section:nth-of-type(3) picture img:hover {
+#contact-img picture img:hover{
     transform: scale(1.05);
 }
 
-body > main > section:nth-of-type(3) dl dt {
+#contact-details dl dt,
+#socials-detail dl dt{
     color: #999D9E;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -245,18 +246,21 @@ body > main > section:nth-of-type(3) dl dt {
     font-size: 14px;
 }
 
-body > main > section:nth-of-type(3) dl dd {
+#contact-details dl dd,
+#socials-detail dl dd{
     padding-top: 10px;
 }
 
-body > main > section:nth-of-type(3) dl dd a {
+#contact-details dl dd a,
+#socials-detail dl dd a{
     color: #ffffff;
     text-decoration: none;
     position: relative;
     transition: color 0.3s ease;
 }
 
-body > main > section:nth-of-type(3) dl dd a::after {
+#contact-details dl dd a::after,
+#socials-detail dl dd a::after{
     content: '';
     position: absolute;
     width: 0;
@@ -267,21 +271,23 @@ body > main > section:nth-of-type(3) dl dd a::after {
     transition: width 0.3s ease;
 }
 
-body > main > section:nth-of-type(3) dl dd a:hover {
+#contact-details dl dd a:hover,
+#socials-detail dl dd a:hover{
     color: #6A7DFF;
 }
 
-body > main > section:nth-of-type(3) dl dd a:hover::after {
+#contact-details dl dd a:hover::after,
+#socials-detail dl dd a:hover::after{
     width: 100%;
 }
 
-body>footer{
+#footer{
     background: #141517;
     padding: 32px 8%;
     color: #FFFFFF;
 }
 
-body>footer>nav{
+#footer-nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -289,7 +295,7 @@ body>footer>nav{
     gap: 32px;
 }
 
-body>footer>nav>div:first-child>a{
+#s-logo>a{
     color: #FFFFFF;
     text-decoration: none;
     font-size: 20px;
@@ -298,24 +304,24 @@ body>footer>nav>div:first-child>a{
     display: inline-block;
 }
 
-body>footer>nav>div:first-child>a:hover{
+#s-logo>a:hover{
     opacity: 1;
     transform: translateY(-2px);
 }
 
-body>footer>nav>div:last-child{
+#socials{
     display: flex;
     align-items: center;
     gap: 24px;
     flex-wrap: wrap;
 }
 
-body>footer>nav>div:last-child>h4{
+#socials>h4{
     font-size: 14px;
     color: #999D9E;
 }
 
-body>footer>nav>div:last-child>a{
+#socials>a{
     color: #FFFFFF;
     text-decoration: none;
     font-size: 16px;
@@ -323,7 +329,7 @@ body>footer>nav>div:last-child>a{
     transition: color 0.3s ease;
 }
 
-body>footer>nav>div:last-child>a::after{
+#socials>a::after{
     content: '';
     position: absolute;
     width: 0;
@@ -334,100 +340,100 @@ body>footer>nav>div:last-child>a::after{
     transition: width 0.3s ease;
 }
 
-body>footer>nav>div:last-child>a:hover{
+#socials>a:hover{
     color: #455CE9;
 }
 
-body>footer>nav>div:last-child>a:hover::after{
+#socials>a:hover::after{
     width: 100%;
 }
 
 /* Desktop - 1440px (Base Design) */
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-    body > main {
+    main{
         max-width: 1440px;
         margin: 0 auto;
     }
 
-    body > main > section:first-child > div {
+    #hero-sec>div{
         padding: 250px 10% 250px;
     }
 
-    body > main > section:first-child > div > div > h1 {
+    #welcome-title>h1{
         font-size: 78px;
     }
 
-    body > main > section {
+    main>section{
         width: 70%;
     }
 
-    body > main > section:nth-of-type(3) {
+    #contact-detail-sec{
         width: 30%;
     }
 
-    body > header > nav {
+    #nav-items{
         gap: 40px;
     }
 }
 
 /* Laptop - 1024px */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    body > main > section:first-child > div {
+    #hero-sec>div{
         padding: 200px 8% 200px;
     }
 
-    body > main > section:first-child > div > div > h1 {
+    #welcome-title>h1{
         font-size: 58px;
     }
 
-    body > header > nav {
+    #nav-items{
         gap: 25px;
     }
 }
 
 /* Tablet - 768px */
 @media screen and (min-width: 426px) and (max-width: 768px) {
-    body > main {
+    main{
         display: flex;
         flex-wrap: wrap;
     }
 
-    body > main > section {
+    main>section{
         width: 100%;
     }
 
-    body > main > section:nth-of-type(3) {
+    #contact-detail-sec{
         width: 100%;
     }
 
-    /*body > header > nav {*/
+    /*#nav-items {*/
     /*    display: none;*/
     /*}*/
 
-    /*body > header > h1:last-child {*/
+    /*#header > h1:last-child {*/
     /*    display: block;*/
     /*}*/
 
-    body > main > section:first-child > div {
+    #hero-sec>div{
         padding: 200px 8% 200px;
     }
 
-    body > main > section:first-child > div > div > h1 {
+    #welcome-title>h1{
         font-size: 58px;
     }
 
-    body > main > section:nth-of-type(2)>div>form>div:nth-child(2) button {
+    #ans-send-btn button{
         width: 150px;
         height: 150px;
     }
 
-    body > footer > nav {
+    #footer-nav{
         flex-direction: column;
         align-items: flex-start;
         gap: 1.5rem;
     }
 
-    body > footer > nav > div:last-child {
+    #socials{
         width: 100%;
         justify-content: flex-start;
         gap: 1rem;
@@ -436,55 +442,55 @@ body>footer>nav>div:last-child>a:hover::after{
 
 /* Mobile Phone - 425px */
 @media screen and (max-width: 425px) {
-    body > main {
+    main{
         display: flex;
         flex-wrap: wrap;
     }
 
-    body > main > section {
+    main>section{
         width: 100%;
     }
 
-    body > main > section:nth-of-type(3) {
+    #contact-detail-sec{
         width: 100%;
     }
 
-    body > header > nav {
+    #nav-items{
         display: none;
     }
 
-    body > header > h1:last-child {
+    #header>h1:last-child{
         display: block;
     }
 
-    body > main > section:first-child > div {
+    #hero-sec>div{
         padding: 200px 8% 200px;
     }
 
-    body > main > section:first-child > div > div > h1 {
+    #welcome-title>h1{
         font-size: 58px;
     }
 
-    body > main > section:nth-of-type(2) form > div:first-child > ol > li > b {
+    #form-ques>.questions>b{
         font-size: 22px;
     }
 
-    body > main > section:nth-of-type(2)>div>form>div:nth-child(2) button {
+    #ans-send-btn button{
         width: 150px;
         height: 150px;
     }
 
-    body > footer {
+    #footer{
         padding: 1.5rem 5%;
     }
 
-    body > footer > nav > div:last-child {
+    #socials{
         flex-direction: column;
         align-items: flex-start;
         gap: 0.8rem;
     }
 
-    body > footer > nav > div:last-child > h4 {
+    #socials>h4{
         margin-bottom: 0.5rem;
     }
 }
