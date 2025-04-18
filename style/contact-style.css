@@ -349,7 +349,8 @@ main>section{
 }
 
 /* Desktop - 1440px (Base Design) */
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+/*@media screen and (min-width: 1025px) and (max-width: 1440px) {*/
+@media screen and (max-width: 1440px) {
     main{
         max-width: 1440px;
         margin: 0 auto;
@@ -377,7 +378,8 @@ main>section{
 }
 
 /* Laptop - 1024px */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+/*@media screen and (min-width: 769px) and (max-width: 1024px) {*/
+@media screen and (max-width: 1024px) {
     #hero-sec>div{
         padding: 200px 8% 200px;
     }
@@ -392,7 +394,8 @@ main>section{
 }
 
 /* Tablet - 768px */
-@media screen and (min-width: 426px) and (max-width: 768px) {
+/*@media screen and (min-width: 426px) and (max-width: 768px) {*/
+@media screen and (max-width: 768px) {
     main{
         display: flex;
         flex-wrap: wrap;
