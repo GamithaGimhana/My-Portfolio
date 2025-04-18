@@ -459,6 +459,7 @@ body>main>section{
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    margin-bottom: -50px;
 }
 
 /* Heading */
@@ -813,17 +814,17 @@ body>main>section{
         width: 100%;
     }
 
-    #footer-nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-    }
+    /*#footer-nav {*/
+    /*    flex-direction: column;*/
+    /*    align-items: flex-start;*/
+    /*    gap: 1.5rem;*/
+    /*}*/
 
-    #socials {
-        width: 100%;
-        justify-content: flex-start;
-        gap: 1rem;
-    }
+    /*#socials {*/
+    /*    width: 100%;*/
+    /*    justify-content: flex-start;*/
+    /*    gap: 1rem;*/
+    /*}*/
 }
 
 /* Mobile Phone Styles (425px) */
