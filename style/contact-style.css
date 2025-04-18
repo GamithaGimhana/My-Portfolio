@@ -430,17 +430,17 @@ main>section{
         height: 150px;
     }
 
-    #footer-nav{
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-    }
+    /*#footer-nav{*/
+    /*    flex-direction: column;*/
+    /*    align-items: flex-start;*/
+    /*    gap: 1.5rem;*/
+    /*}*/
 
-    #socials{
-        width: 100%;
-        justify-content: flex-start;
-        gap: 1rem;
-    }
+    /*#socials{*/
+    /*    width: 100%;*/
+    /*    justify-content: flex-start;*/
+    /*    gap: 1rem;*/
+    /*}*/
 }
 
 /* Mobile Phone - 425px */
