@@ -57,7 +57,7 @@ body{
     content: '';
     width: 0;
     height: 3px;
-    background: #FFFFFF;
+    background: black;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -92,7 +92,7 @@ body>main>section{
 }
 
 #welcome-title{
-    width: 800px;
+    width: 80%;
     padding: 10px 5%;
 }
 
@@ -222,6 +222,7 @@ body>main>section{
     border: none;
 }
 
+/* Contact Section */
 #contact-sec>div{
     min-height: 80vh;
     padding: 5% 8%;
@@ -270,6 +271,7 @@ body>main>section{
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    margin-bottom: -50px;
 }
 
 #heading-container>h2{
@@ -514,6 +516,7 @@ body>main>section{
 @media screen and (max-width: 768px) {
     body {
         width: 100%;
+        /*width: 104%;*/
         overflow-x: hidden;
     }
 
@@ -567,11 +570,11 @@ body>main>section{
         font-size: 28px;
     }
 
-    #footer-nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-    }
+    /*#footer-nav {*/
+    /*    flex-direction: column;*/
+    /*    align-items: flex-start;*/
+    /*    gap: 1.5rem;*/
+    /*}*/
 }
 
 /* Mobile Phone - 425px */
@@ -699,24 +702,38 @@ body>main>section{
         height: 130px;
     }
 
-    #footer {
-        width: 100%;
-        margin: 0;
-        padding: 1.5rem 3%;
-        box-sizing: border-box;
-    }
+    /*#footer {*/
+    /*    width: 100%;*/
+    /*    margin: 0;*/
+    /*    padding: 1.5rem 3%;*/
+    /*    box-sizing: border-box;*/
+    /*}*/
 
-    #footer-nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-        width: 100%;
+    /*#footer-nav {*/
+    /*    flex-direction: column;*/
+    /*    align-items: flex-start;*/
+    /*    gap: 1.5rem;*/
+    /*    width: 100%;*/
+    /*}*/
+
+    /*#socials {*/
+    /*    flex-direction: column;*/
+    /*    align-items: flex-start;*/
+    /*    gap: 0.8rem;*/
+    /*    width: 100%;*/
+    /*}*/
+
+    #footer {
+        padding: 1.5rem 2%;
     }
 
     #socials {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.8rem;
-        width: 100%;
+    }
+
+    #socials > h4 {
+        margin-bottom: 0.5rem;
     }
 }
