@@ -15,36 +15,35 @@
     <!--Header-->
     <header id="header">
         <h1><a href="index.html">©CodebyGami</a></h1>
-          <nav>
+        <nav id="nav-items">
             <a href="work.html">Work</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-          </nav>
+        </nav>
         <h1><a href="">.Menu</a></h1>
     </header>
 
     <!--Content-->
     <main>
         <!--Hero Section-->
-        <section>
+        <section id="hero-sec">
             <div>
-                <div>
+                <div id="welcome-title">
                     <!--contact page title-->
-                    <h1>Let's start a<br>
-                project together</h1>
+                    <h1>Let's start a<br>project together</h1>
                 </div>
             </div>
         </section>
 
         <!--get info question form-->
-        <section>
+        <section id="contact-form-sec">
             <div>
-                <form action="http://localhost:8080/form" method="post">
+                <form action="http://localhost:8080/form" method="post" id="contact-form">
                     <div>
-                        <ol>
+                        <ol id="form-ques">
                             <!--Q1-->
                             <hr>
-                            <li>
+                            <li id="q-1" class="questions">
                                 <b>What's your name?</b>
                                 <br>
                                 <input type="text" id="name" name="name" placeholder="Gamitha Gimhana *" required>
@@ -52,7 +51,7 @@
                             </li>
 
                             <!--Q2-->
-                            <li>
+                            <li id="q-2" class="questions">
                                 <b>What's your email?</b>
                                 <br>
                                 <input type="email" id="email" name="email" placeholder="gami@example.com" required>
@@ -60,7 +59,7 @@
                             </li>
 
                             <!--Q3-->
-                            <li>
+                            <li id="q-3" class="questions">
                                 <b>What services are you looking for?</b>
                                 <br>
                                 <input type="text" id="service" name="service" placeholder="Web Design, Web Development ..." required>
@@ -68,7 +67,7 @@
                             </li>
 
                             <!--Q4-->
-                            <li>
+                            <li id="q-4" class="questions">
                                 <b>Your message</b>
                                 <br>
                                 <textarea id="message" name="message" rows="2" placeholder="Hello Gamitha, can you help me with ... *"></textarea>
@@ -79,7 +78,7 @@
 <!--                    <br>-->
 
                     <!--get info send section-->
-                    <div>
+                    <div id="ans-send-btn">
                         <!--button-->
                         <button type="submit">Send it!</button>
                     </div>
@@ -89,39 +88,39 @@
         </section>
 
         <!--contact detail section-->
-        <section>
+        <section id="contact-detail-sec">
             <div>
-                <div>
+                <div id="contact-img">
                     <picture>
                         <source srcset="assets/images/my_photo_1.0.png" type="image/png">
                         <img src="assets/images/my_photo_1.0.png" width="100" height="100" title="Gamitha Gimhana" alt="my_photo">
                     </picture>
                 </div>
 
-                <div>
+                <div id="contact-details">
                     <dl>
                         <dt>CONTACT DETAILS</dt>
 
-                        <dd>
+                        <dd id="mail">
                             <a href="mailto:gamitha.gimhana99@gmail.com" target="_blank">gamitha.gimhana99@gmail.com</a>
                         </dd>
-                        <dd>
+                        <dd id="phone">
                             <a href="tel:+94761218801" target="_blank">+94761218801</a>
                         </dd>
                     </dl>
                 </div>
 
-                <div>
+                <div id="socials-detail">
                     <dl>
                         <dt>SOCIALS</dt>
 
-                        <dd>
+                        <dd id="linkedin-link">
                             <a href="https://www.linkedin.com/in/gamitha-gimhana/" target="_blank">LinkedIn</a>
                         </dd>
-                        <dd>
+                        <dd id="instergram-link">
                             <a href="https://www.instagram.com/gamitha_gimhana/" target="_blank">Instergram</a>
                         </dd>
-                        <dd>
+                        <dd id="twitter-link">
                             <a href="https://x.com/gamitha_gimhana" target="_blank">Twitter</a>
                         </dd>
                     </dl>
@@ -132,14 +131,14 @@
 
     <!--Footer-->
     <footer id="footer">
-        <nav>
+        <nav id="footer-nav">
             <!--left side-->
-            <div>
-                <a href="index.html">©CodebyGami</a>
+            <div id="s-logo">
+                <a href="#header">©CodebyGami</a>
             </div>
 
             <!--right side-->
-            <div>
+            <div id="socials">
                 <h4>SOCIALS</h4>
                 <a href="https://www.linkedin.com/in/gamitha-gimhana/" target="_blank">LinkedIn</a>
                 <a href="https://www.instagram.com/gamitha_gimhana/" target="_blank">Instergram</a>
