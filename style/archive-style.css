@@ -23,7 +23,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FFFFFF;
+    background-color: #E9EAEB;
 }
 
 #header>h1 {
@@ -89,7 +89,7 @@ body>main>section{
 
 #hero-sec>div{
     height: 50vh;
-    background-color: white;
+    background-color: #E9EAEB;
     display: flex;
     padding: 10px 5%;
     justify-content: space-between;
@@ -141,7 +141,7 @@ body>main>section{
 
 #work-sec>div{
     padding: 10px 5%;
-    background-color: #FFFFFF;
+    background-color: #E9EAEB;
     text-align: left;
     position: relative;
 }
@@ -165,7 +165,7 @@ body>main>section{
     height: 35vh;
     display: flex;
     margin: 48px 0;
-    background-color: #f9f9f9;
+    background-color: #E9EAEB;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
