@@ -1,0 +1,733 @@
+body{
+    background: #999D9E;
+    gap: 0;
+    position: relative;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+#header{
+    width: 100%;
+    padding: 10px 5%;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+#header>h1 {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#header>h1>a{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+#header>h1:nth-child(2){
+    display: none;
+    position: absolute;
+    left: 60px;
+    top: 10px;
+}
+
+#nav-items{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+#nav-items>a{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+#nav-items>a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: black;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+#nav-items>a:hover::after{
+    width: 100%;
+}
+
+#header>h1:last-child{
+    display: none;
+}
+
+body>main{
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body>main>section{
+    width: 100%;
+}
+
+#hero-sec>div{
+    height: 50vh;
+    background-color: white;
+    display: flex;
+    padding: 10px 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#welcome-title{
+    width: 80%;
+    padding: 10px 5%;
+}
+
+#welcome-title>h1{
+    font-size: 80px;
+}
+
+#github-way{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#github-way>h4>a{
+    color: #141517;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+#github-way>h4>a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #455CE9;
+    transition: width 0.3s ease;
+}
+
+#github-way>h4>a:hover{
+    color: #455CE9;
+}
+
+#github-way>h4>a:hover::after{
+    width: 100%;
+}
+
+#work-sec>div{
+    padding: 10px 5%;
+    background-color: #FFFFFF;
+    text-align: left;
+    position: relative;
+}
+
+#work-sec>div>h4{
+    position: relative;
+    font-size: 14px;
+    font-weight: lighter;
+    text-align: left;
+    text-decoration: none;
+    padding: 40px 5%;
+}
+
+#work-sec>div>hr{
+    border: none;
+    height: 1px;
+    background-color: #e0e0e0;
+}
+
+.projects{
+    height: 35vh;
+    display: flex;
+    margin: 48px 0;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail{
+    width: 50%;
+    overflow: hidden;
+}
+
+.thumbnail img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.thumbnail img:hover{
+    transform: scale(1.05);
+}
+
+.repo-link, .about-project{
+    width: 50%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.repo-link>h2>a{
+    color: #141517;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.repo-link>h2>a:hover{
+    color: #999D9E;
+}
+
+.about-project>h3{
+    color: #666;
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.about-project>h5{
+    color: #666;
+    margin: 0;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+#space{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    box-shadow: none;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    transition: none;
+}
+
+#space:hover{
+    transform: none;
+    box-shadow: none;
+}
+
+/* Contact Section */
+#contact-sec>div{
+    min-height: 80vh;
+    padding: 5% 8%;
+    background: #141517;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+#contact-links{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#heading-container{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+#contact-img{
+    background: linear-gradient(145deg, #999D9E, #b3b7b8);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact-img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+#contact-img>picture>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: -50px;
+}
+
+#heading-container>h2{
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#contact-ways{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.contact-btns{
+    background: rgba(28, 29, 32, 0.7);
+    padding: 20px 32px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 48px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-btns:hover{
+    background: #455CE9;
+    transform: translateY(-5px);
+    border: none;
+}
+
+.contact-btns>a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#contact-way{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-btn{
+    background: #455CE9;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#contact-btn:hover{
+    background: #334BD3;
+    transform: scale(1.05);
+}
+
+#contact-btn>a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+#contact-sec>div>hr{
+    width: 100%;
+    height: 1px;
+    background: #FFFFFF;
+    border: none;
+    margin-top: 48px;
+}
+
+#footer{
+    background: #141517;
+    padding: 32px 8%;
+    color: #FFFFFF;
+}
+
+#footer-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+#s-logo>a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+#s-logo>a:hover{
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+#socials{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+#socials>h4{
+    font-size: 14px;
+    color: #999D9E;
+}
+
+#socials>a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+#socials>a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #455CE9;
+    transition: width 0.3s ease;
+}
+
+#socials>a:hover{
+    color: #455CE9;
+}
+
+#socials>a:hover::after{
+    width: 100%;
+}
+
+/* Desktop - 1440px */
+/*@media screen and (min-width: 1025px) and (max-width: 1440px) {*/
+@media screen and (max-width: 1440px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    #header {
+        padding: 10px 5%;
+    }
+
+    #hero-sec > div {
+        height: 50vh;
+        padding: 10px 5%;
+    }
+
+    #welcome-title > h1 {
+        font-size: 70px;
+    }
+
+    /* Work Section */
+    .projects {
+        height: 40vh;
+    }
+
+    .repo-link > h2 > a {
+        font-size: 45px;
+    }
+
+    /* Contact Section */
+    #contact-sec > div {
+        padding: 5% 8%;
+        gap: 40px;
+    }
+
+    #heading-container > h2 {
+        font-size: 35px;
+    }
+}
+
+/* Laptop - 1024px */
+/*@media screen and (min-width: 769px) and (max-width: 1024px) {*/
+@media screen and (max-width: 1024px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    #header {
+        padding: 10px 4%;
+    }
+
+    #hero-sec > div {
+        height: 40vh;
+        padding: 10px 4%;
+    }
+
+    #welcome-title > h1 {
+        font-size: 60px;
+    }
+
+    /* Work Section */
+    .projects {
+        height: 35vh;
+    }
+
+    .repo-link > h2 > a {
+        font-size: 40px;
+    }
+
+    /* Contact Section */
+    #contact-sec > div {
+        padding: 5% 6%;
+        gap: 30px;
+    }
+
+    #heading-container > h2 {
+        font-size: 30px;
+    }
+
+    #contact-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contact-btns {
+        padding: 15px 25px;
+    }
+}
+
+/* Tablet - 768px */
+/*@media screen and (min-width: 426px) and (max-width: 768px) {*/
+@media screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        /*width: 104%;*/
+        overflow-x: hidden;
+    }
+
+    #hero-sec > div {
+        height: 40vh;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #welcome-title > h1 {
+        font-size: 48px;
+    }
+
+    /* Work Section */
+    .projects {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .repo-link,
+    .thumbnail,
+    .about-project {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .repo-link > h2 > a {
+        font-size: 36px;
+    }
+
+    /* Contact Section */
+    #contact-sec > div {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 5% 4%;
+    }
+
+    #contact-links {
+        width: 100%;
+        align-items: center;
+    }
+
+    #heading-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    #heading-container > h2 {
+        font-size: 28px;
+    }
+}
+
+/* Mobile Phone - 425px */
+@media screen and (max-width: 425px) {
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    #header {
+        width: 100%;
+        padding: 10px 3%;
+        box-sizing: border-box;
+    }
+
+    #nav-items {
+        display: none;
+    }
+
+    #header > h1:last-child {
+        display: block;
+    }
+
+    body > main {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    body > main > section {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #hero-sec > div {
+        height: 30vh;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        padding: 5%;
+        box-sizing: border-box;
+    }
+
+    #welcome-title > h1 {
+        font-size: 26px;
+    }
+
+    /* Work Section */
+    #work-sec > div {
+        width: 100%;
+        padding: 5%;
+        box-sizing: border-box;
+    }
+
+    .projects {
+        height: auto;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .repo-link,
+    .thumbnail,
+    .about-project {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .thumbnail {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .thumbnail img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .repo-link > h2 > a {
+        font-size: 28px;
+    }
+
+    /* Contact Section */
+    #contact-sec > div {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 5% 4%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #contact-links {
+        width: 100%;
+        align-items: center;
+    }
+
+    #heading-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    #contact-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    #heading-container > h2 {
+        font-size: 24px;
+    }
+
+    .contact-btns {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    #contact-btn {
+        width: 130px;
+        height: 130px;
+    }
+
+    #footer {
+        padding: 1.5rem 2%;
+    }
+
+    #socials {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    #socials > h4 {
+        margin-bottom: 0.5rem;
+    }
+}
