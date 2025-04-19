@@ -374,6 +374,13 @@ body>main>section{
     font-size: 20px;
 }
 
+.about-project>h5{
+    color: #666;
+    margin: 0;
+    font-weight: 300;
+    font-size: 14px;
+}
+
 #work-way{
     display: flex;
     justify-content: center;
