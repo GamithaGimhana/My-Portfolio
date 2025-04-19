@@ -735,6 +735,14 @@ body>main>section{
 
 /* Mobile Phone Styles (425px) */
 @media screen and (max-width: 425px) {
+    #nav-items {
+        display: none;
+    }
+
+    #header > h1:last-child {
+        display: block;
+    }
+
     #hero-sec > div {
         flex-direction: column;
         padding: 60px 4% 30px;
