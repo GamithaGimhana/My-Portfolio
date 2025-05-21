@@ -73,7 +73,125 @@ body{
     width: 100%;
 }
 
-#header>h1:last-child{
+.nav-container {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e22;
+    z-index: 999;
+    transition: right 0.3s ease-in;
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.nav-container.active {
+    right: 0;
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.navigation {
+    color: #fff;
+    padding: 0 40px;
+    margin-top: 10%;
+}
+
+.navigation h2 {
+    margin-bottom: 40px;
+    font-weight: 400;
+    color: #737373;
+    font-size: 16px;
+}
+
+.nav-divider {
+    height: 1px;
+    background-color: #2d2d33;
+    margin: 20px 0;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 10%;
+    padding-bottom: 100%;
+}
+
+.nav-link {
+    font-size: 42px;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.5s ease;
+}
+
+.nav-link:hover {
+    color: #a8a8a8;
+}
+
+.active-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.close-btn {
+    position: relative;
+    border-radius: 50%;
+    background-color: #5a5be5;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    margin-left: 70%;
+    margin-top: 10%;
+}
+
+.close-btn span {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.close-btn span::before,
+.close-btn span::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    top: 50%;
+    left: 0;
+}
+
+.close-btn span::before {
+    transform: rotate(45deg);
+}
+
+.close-btn span::after {
+    transform: rotate(-45deg);
+}
+
+/* Styles for the toggle button */
+.menu-toggle {
+    border: none;
+    background: transparent;
+    color: black;
+    padding: 12px 15px;
+    font-size: 18px;
+}
+
+#menu-container{
     display: none;
 }
 
@@ -637,7 +755,7 @@ body>main>section{
         display: none;
     }
 
-    #header > h1:last-child {
+    #menu-container {
         display: block;
     }
 

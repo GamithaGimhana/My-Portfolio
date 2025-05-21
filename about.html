@@ -25,7 +25,27 @@
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
           </nav>
-        <h1><a href="">.Menu</a></h1>
+<!--        <h1><a href="">.Menu</a></h1>-->
+        <div id="menu-container">
+            <button class="menu-toggle">.Menu</button>
+            <div class="nav-container">
+                <button class="close-btn">
+                    <span>X</span>
+                </button>
+
+                <div class="navigation">
+                    <h2>NAVIGATION</h2>
+                    <hr>
+                    <div class="nav-links">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="work.html" class="nav-link">Work</a>
+                        <a href="about.html" class="nav-link">About<span class="active-dot"></span></a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
     </header>
 
     <!--Content-->
@@ -221,5 +241,7 @@
             </div>
         </nav>
     </footer>
+
+    <script src="style_js/menu-script.js"></script>
 </body>
 </html>
