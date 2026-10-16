@@ -10,6 +10,6 @@
     "check": "node scripts/render.mjs && node scripts/check.mjs"
   },
   "engines": {
-    "node": "20.x"
+    "node": "24.x"
   }
 }
