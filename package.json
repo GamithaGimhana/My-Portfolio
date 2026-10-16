@@ -1,0 +1,15 @@
+{
+  "name": "gamitha-gimhana-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Gamitha Gimhana's personal portfolio.",
+  "scripts": {
+    "dev": "node scripts/render.mjs && node scripts/serve.mjs",
+    "build": "node scripts/render.mjs && node scripts/build.mjs",
+    "check": "node scripts/render.mjs && node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

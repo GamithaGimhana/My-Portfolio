@@ -1,0 +1,122 @@
+{
+  "aurora": {
+    "intro": "A learning space that brings the essentials together.",
+    "problem": "Quizzes, study notes, flashcards, and class participation are closely related parts of learning. Aurora brings them into a shared application, with different workflows for students, lecturers, and administrators.",
+    "role": "Full-stack development",
+    "roleDescription": "I built the frontend and backend, connecting React and TypeScript views to Node and Express REST APIs. I designed MongoDB data models, managed application state and data flow, and deployed the frontend on Vercel.",
+    "features": [
+      ["Role-based workspaces", "Separate experiences organize the tasks of students, lecturers, and administrators."],
+      ["Quizzes and room participation", "Lecturers can create quizzes, while students join quiz rooms and complete attempts."],
+      ["Study resources", "Notes and flashcard decks support learning beyond a single quiz session."],
+      ["Performance views", "Dashboard views bring learning activity and results into the application."]
+    ],
+    "architecture": "A React and TypeScript frontend manages the interface and client state. It connects to a Node.js and Express REST API, with MongoDB providing document storage. Frontend and backend are maintained in separate public repositories.",
+    "flow": ["React interface", "Express REST API", "MongoDB"],
+    "focus": "Role-based interfaces, frontend/backend integration, and organizing a complete learning workflow."
+  },
+  "floodsentinel": {
+    "intro": "Exploring flood scenarios through maps and machine learning.",
+    "problem": "Environmental measurements become easier to explore when their location and context are visible. FloodSentinel is an academic investigation into connecting district-level maps, weather inputs, and a machine-learning pipeline in one interface.",
+    "role": "Geospatial frontend & ML",
+    "roleDescription": "This is a team project. The repository credits my contribution to the frontend geospatial map and the full machine-learning lifecycle. The wider project also includes weather ingestion and scenario exploration.",
+    "features": [
+      ["District-level exploration", "A geospatial interface organizes the system around Sri Lankan districts."],
+      ["Weather inputs", "Weather ingestion supplies contextual data for the dashboard and scenario workflow."],
+      ["Scenario modelling", "A Python machine-learning pipeline works with synthetic flood scenarios."],
+      ["Connected dashboard", "A React interface connects map exploration with backend model outputs."]
+    ],
+    "architecture": "React and TypeScript support the dashboard, with Leaflet providing map interactions. A FastAPI backend connects the interface to Python modelling components built with scikit-learn.",
+    "flow": ["React + Leaflet", "FastAPI", "scikit-learn pipeline"],
+    "focus": "Geospatial interface development and connecting a machine-learning workflow to an application. Synthetic training scenarios are not evidence of real-world prediction accuracy."
+  },
+  "resq": {
+    "intro": "A shared command portal for response coordination.",
+    "problem": "Incident information, team allocation, and evidence can sit in separate workflows. RESQ explores how a command portal and domain services can bring these responsibilities together in a disaster-response application.",
+    "role": "Academic project",
+    "roleDescription": "This academic project connects a React command portal with dedicated incident, response, and evidence services. Its infrastructure definitions extend the work beyond individual services into the configuration of a cloud-based application.",
+    "features": [
+      ["Incident mapping", "The portal provides an interface for viewing and working with incident information."],
+      ["Response coordination", "Response workflows organize team allocation and related operational records."],
+      ["Evidence management", "A dedicated domain service supports the management of digital evidence."],
+      ["Cloud infrastructure", "Terraform definitions describe infrastructure alongside the application services."]
+    ],
+    "architecture": "A React and TypeScript portal connects to Spring-based domain services. The system separates incident, response, and evidence responsibilities, using service discovery and an API gateway. Infrastructure definitions target Google Cloud.",
+    "flow": ["Command portal", "API gateway", "Domain services"],
+    "focus": "Separating domain responsibilities and connecting a frontend, services, and cloud infrastructure."
+  },
+  "aurora-mobile": {
+    "intro": "A study companion that goes where you go.",
+    "problem": "Study materials should be easy to revisit away from a desktop. Aurora Mobile adapts note organization and flashcard review into a focused mobile experience for managing learning resources on the go.",
+    "role": "Mobile development",
+    "roleDescription": "I built the React Native interface, implemented application state with Redux Toolkit, and integrated Firebase authentication and Firestore. I used TypeScript and custom hooks to organize the code, and Expo Application Services to manage the mobile build workflow.",
+    "features": [
+      ["Organized notes", "Create, retrieve, update, and delete notes from a mobile interface."],
+      ["Flashcard study", "Flashcard decks and study sessions provide a dedicated space for review."],
+      ["Account access", "Email and password authentication is integrated through Firebase Auth."],
+      ["Personal viewing preferences", "Light and dark themes support different reading preferences."]
+    ],
+    "architecture": "React Native and Expo provide the application foundation. TypeScript and Redux Toolkit organize application data and state, NativeWind supports interface styling, and Firebase supplies authentication and Cloud Firestore persistence.",
+    "flow": ["React Native + Expo", "Redux Toolkit", "Firebase"],
+    "focus": "Mobile interaction design, state management, authentication, and cloud-backed study resources."
+  },
+  "guestfind": {
+    "intro": "Helping lost belongings find their way back.",
+    "problem": "A lost item creates a sequence of tasks: reporting it, identifying a match, checking a claim, and arranging its return. GuestFind organizes that sequence for hotel staff and guests in a shared web application.",
+    "role": "Personal project",
+    "roleDescription": "This project brings together a Spring Boot REST backend and an HTML, CSS, and JavaScript frontend. Separate administrator, staff, and guest workflows support the different responsibilities in the lost-and-found process.",
+    "features": [
+      ["Item reports", "Record lost and found belongings so they can be managed through a structured workflow."],
+      ["Matching and claims", "Connect possible matches with a claim review and approval process."],
+      ["Delivery management", "Track the next step after a claim has been approved."],
+      ["Role-specific access", "Different responsibilities are organized for administrators, staff, and guests."]
+    ],
+    "architecture": "A Java and Spring Boot backend exposes REST APIs and uses Spring Security for access-related functionality. MySQL stores application data, while a browser frontend presents reporting and management workflows.",
+    "flow": ["Browser interface", "Spring Boot REST API", "MySQL"],
+    "focus": "Modelling a multi-step business process and connecting roles, application state, and persistent records."
+  },
+  "greenhouse": {
+    "intro": "Connecting the moving parts of greenhouse management.",
+    "problem": "Zones, sensor readings, automation decisions, and crop records represent different parts of greenhouse operations. This project explores how to model those responsibilities as cooperating services instead of one tightly coupled application.",
+    "role": "Academic project",
+    "roleDescription": "The public project implements a distributed management system with four domain services. A registry, central configuration server, and gateway provide the supporting service infrastructure.",
+    "features": [
+      ["Zone management", "Organize greenhouse zones as a distinct application responsibility."],
+      ["Sensor data", "A telemetry service handles sensor-related records and inputs."],
+      ["Automation rules", "Automation actions are separated from the collection of telemetry."],
+      ["Crop lifecycle", "Crop records are managed by their own domain service."]
+    ],
+    "architecture": "Java and Spring Cloud provide the service foundation. Eureka supports discovery, a central configuration server coordinates configuration, and an API gateway provides an entry point to the domain services. MySQL supports persistence.",
+    "flow": ["API gateway", "Spring Cloud services", "MySQL"],
+    "focus": "Service boundaries, discovery, central configuration, and coordination across a distributed application."
+  },
+  "iso8583": {
+    "intro": "Making payment-message structure easier to explore.",
+    "problem": "Payment protocols are easier to understand when messages can be inspected and request-response exchanges can be reproduced. These Android experiments explore ISO 8583 message parsing and a local POS-to-switch simulation.",
+    "role": "Personal development experiments",
+    "roleDescription": "Two public repositories cover complementary experiments: an Android parser and a simulator. The parser exposes message structure, while the simulator constructs a sale request and exchanges it with a local switch server.",
+    "features": [
+      ["Message inspection", "Inspect a message header, message type indicator, and individual data elements."],
+      ["jPOS integration", "Use jPOS in the parsing workflow to work with ISO 8583 messages."],
+      ["POS simulation", "Construct a sale request for a controlled development exchange."],
+      ["Local switch exchange", "Use TCP sockets to send a request and receive a response from a local server."]
+    ],
+    "architecture": "Java-based Android code handles the application and protocol experiment. The parser uses jPOS, while the simulation separates a POS terminal flow from a local switch server communicating over TCP.",
+    "flow": ["Android / POS client", "ISO 8583 over TCP", "Local switch server"],
+    "focus": "Protocol structure, message parsing, and socket-based request-response communication in a development environment."
+  },
+  "serenity": {
+    "intro": "Organizing the administrative side of care.",
+    "problem": "A care center needs to connect people, appointments, programs, and payment records. Serenity is a desktop coursework application focused on organizing these administrative workflows in one system.",
+    "role": "Academic project",
+    "roleDescription": "The public JavaFX application includes controllers for patient registration, therapist and program management, therapy sessions, payments, users, and role-specific dashboards. Its Maven configuration includes Hibernate, MySQL, and JasperReports.",
+    "features": [
+      ["Patient registration", "Manage patient information through a dedicated administration workflow."],
+      ["Therapists and programs", "Keep therapist and program records within the application."],
+      ["Therapy sessions", "Organize session-related records alongside the people and programs involved."],
+      ["Payments and dashboards", "Maintain payment records and present role-specific dashboard interfaces."]
+    ],
+    "architecture": "JavaFX provides the desktop interface and controllers. Hibernate connects domain entities to MySQL persistence, with JasperReports included for reporting functionality.",
+    "flow": ["JavaFX interface", "Hibernate", "MySQL"],
+    "focus": "Desktop application structure, object-relational mapping, and administrative workflows. This is an academic administration project, not a clinical decision system."
+  }
+}

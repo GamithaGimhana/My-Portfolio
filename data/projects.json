@@ -1,0 +1,273 @@
+{
+  "researchedAt": "2026-10-16",
+  "profile": {
+    "name": "Gamitha Gimhana",
+    "github": "https://github.com/GamithaGimhana",
+    "publicOriginalRepositoriesReviewed": 57,
+    "email": "gamitha.gimhana99@gmail.com",
+    "profileReadme": "https://github.com/GamithaGimhana/GamithaGimhana/blob/main/README.md",
+    "note": "Public profile README describes an aspiring developer and is stale relative to user-confirmed current role. Age and degree completion not verified; omitted."
+  },
+  "projects": [
+    {
+      "id": "floodsentinel",
+      "name": "FloodSentinel",
+      "category": "AI & Data",
+      "featured": true,
+      "repository": "https://github.com/GamithaGimhana/FloodSentinel",
+      "repositories": [
+        "https://github.com/GamithaGimhana/FloodSentinel"
+      ],
+      "stack": [
+        "React",
+        "TypeScript",
+        "Python",
+        "FastAPI",
+        "scikit-learn",
+        "Leaflet"
+      ],
+      "summary": "A Sri Lanka flood-scenario dashboard connecting district maps, live weather data and a machine-learning pipeline.",
+      "details": "An academic team project covering 25 Sri Lankan districts, weather ingestion, scenario exploration and seven-day projections. The project README credits Gamitha with the frontend geospatial map and full ML lifecycle.",
+      "contribution": "Frontend geospatial map and full ML lifecycle (team project)",
+      "status": "Academic team project",
+      "caveat": "The model is trained on synthetic scenarios. It is not an official warning system or a verified measure of real-world flood probability.",
+      "demo": "https://floodsentinel-207370591616.asia-south1.run.app",
+      "demoVerified": false,
+      "screenshots": [],
+      "sources": [
+        "https://github.com/GamithaGimhana/FloodSentinel/blob/main/README.md",
+        "https://github.com/GamithaGimhana/FloodSentinel/blob/main/frontend/package.json",
+        "https://github.com/GamithaGimhana/FloodSentinel/blob/main/backend/requirements.txt"
+      ]
+    },
+    {
+      "id": "aurora",
+      "name": "Aurora LMS",
+      "category": "Web Apps",
+      "featured": true,
+      "repository": "https://github.com/GamithaGimhana/Aurora-FE",
+      "repositories": [
+        "https://github.com/GamithaGimhana/Aurora-FE",
+        "https://github.com/GamithaGimhana/Aurora-BE"
+      ],
+      "stack": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Redux Toolkit"
+      ],
+      "summary": "A learning platform bringing quizzes, live quiz rooms, notes and flashcards into one role-based experience.",
+      "details": "Separate administrator, lecturer and student workflows connect a React frontend to a TypeScript REST API. Features include quiz attempts, flashcard decks, notes, room participation and performance views.",
+      "contribution": "Public personal project",
+      "status": "Public project",
+      "demo": "https://aurora-fe-eight.vercel.app/",
+      "demoVerified": false,
+      "screenshots": [
+        {
+          "path": "assets/images/projects/aurora-dashboard.png",
+          "url": "https://res.cloudinary.com/dg11uvapu/image/upload/v1767595814/Screenshot_2026-01-05_121941_isfjma.png",
+          "label": "Aurora student dashboard"
+        }
+      ],
+      "sources": [
+        "https://github.com/GamithaGimhana/Aurora-FE/blob/main/README.md",
+        "https://github.com/GamithaGimhana/Aurora-BE/blob/main/README.md"
+      ]
+    },
+    {
+      "id": "resq",
+      "name": "RESQ",
+      "category": "Cloud & Backend",
+      "featured": true,
+      "repository": "https://github.com/GamithaGimhana/RESQ-Webapp",
+      "repositories": [
+        "https://github.com/GamithaGimhana/RESQ-Webapp",
+        "https://github.com/GamithaGimhana/RESQ-Service-Incident",
+        "https://github.com/GamithaGimhana/RESQ-Service-Response",
+        "https://github.com/GamithaGimhana/RESQ-Service-Evidence",
+        "https://github.com/GamithaGimhana/RESQ-Infrastructure"
+      ],
+      "stack": [
+        "React",
+        "TypeScript",
+        "Spring Boot",
+        "Google Cloud",
+        "Terraform",
+        "MySQL"
+      ],
+      "summary": "A disaster-response command portal for mapping incidents, coordinating teams and managing digital evidence.",
+      "details": "An enterprise cloud architecture project with a React command portal, Spring-based domain services, service discovery, an API gateway and Terraform infrastructure definitions. Includes incident workflows, team allocation and evidence management.",
+      "contribution": "Public academic project",
+      "status": "Academic project",
+      "demo": "https://resq-frontend-407442029355.asia-south1.run.app",
+      "demoVerified": false,
+      "screenshots": [],
+      "sources": [
+        "https://github.com/GamithaGimhana/RESQ-Webapp/blob/main/README.md",
+        "https://github.com/GamithaGimhana/RESQ-Service-Incident/blob/main/pom.xml",
+        "https://github.com/GamithaGimhana/RESQ-Infrastructure/blob/main/README.md"
+      ]
+    },
+    {
+      "id": "aurora-mobile",
+      "name": "Aurora Mobile",
+      "category": "Mobile",
+      "featured": true,
+      "repository": "https://github.com/GamithaGimhana/Aurora-Mobile",
+      "repositories": [
+        "https://github.com/GamithaGimhana/Aurora-Mobile"
+      ],
+      "stack": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Firebase",
+        "Redux Toolkit",
+        "NativeWind"
+      ],
+      "summary": "A mobile study companion for organizing notes, reviewing flashcards and keeping learning close at hand.",
+      "details": "An Expo and React Native app with Firebase authentication, notes, flashcard study sessions, light and dark themes, and Redux Toolkit state management.",
+      "contribution": "Public personal project",
+      "status": "Public project",
+      "demo": "https://youtu.be/mbUepC36zvU",
+      "demoType": "Video walkthrough",
+      "demoVerified": false,
+      "screenshots": [
+        {
+          "path": "assets/images/projects/aurora-mobile-home.jpg",
+          "url": "https://res.cloudinary.com/dg11uvapu/image/upload/v1770680515/home_zthmir.jpg",
+          "label": "Aurora Mobile home screen"
+        },
+        {
+          "path": "assets/images/projects/aurora-mobile-study.jpg",
+          "url": "https://res.cloudinary.com/dg11uvapu/image/upload/v1770680514/studymode_qe656k.jpg",
+          "label": "Aurora Mobile study mode"
+        }
+      ],
+      "sources": [
+        "https://github.com/GamithaGimhana/Aurora-Mobile/blob/main/README.md"
+      ]
+    },
+    {
+      "id": "guestfind",
+      "name": "GuestFind",
+      "category": "Web Apps",
+      "featured": false,
+      "repository": "https://github.com/GamithaGimhana/GuestFind",
+      "repositories": [
+        "https://github.com/GamithaGimhana/GuestFind"
+      ],
+      "stack": [
+        "Java",
+        "Spring Boot",
+        "Spring Security",
+        "MySQL",
+        "JavaScript"
+      ],
+      "summary": "A hotel lost-and-found platform that takes items from initial report through claim approval and delivery.",
+      "details": "Role-based workflows for administrators, hotel staff and guests, with item reporting, matching, claims, delivery management, notifications and statistics. A Spring Boot REST backend supports the HTML, CSS and JavaScript frontend.",
+      "contribution": "Public personal project",
+      "status": "Public project",
+      "demo": "https://youtu.be/S03Ys5PPbVU",
+      "demoType": "Video walkthrough",
+      "demoVerified": false,
+      "screenshots": [
+        {
+          "path": "assets/images/projects/guestfind-dashboard.png",
+          "url": "https://i.ibb.co/sdZdyW5L/Dashboard.png",
+          "label": "GuestFind landing page (README labels this Dashboard)"
+        }
+      ],
+      "sources": [
+        "https://github.com/GamithaGimhana/GuestFind/blob/main/README.md"
+      ]
+    },
+    {
+      "id": "greenhouse",
+      "name": "Automated Greenhouse",
+      "category": "Cloud & Backend",
+      "featured": false,
+      "repository": "https://github.com/GamithaGimhana/Automated-Greenhouse-Management-System",
+      "repositories": [
+        "https://github.com/GamithaGimhana/Automated-Greenhouse-Management-System"
+      ],
+      "stack": [
+        "Java",
+        "Spring Cloud",
+        "Eureka",
+        "MySQL",
+        "REST APIs"
+      ],
+      "summary": "A distributed greenhouse management system connecting telemetry, automation rules and crop lifecycle tracking.",
+      "details": "Four domain services manage zones, sensor data, automation actions and crops. A service registry, central configuration server and API gateway coordinate the system.",
+      "contribution": "Public academic project",
+      "status": "Academic project",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/GamithaGimhana/Automated-Greenhouse-Management-System/main/docs/eureka-services-up.png",
+          "label": "Eureka service registry evidence"
+        }
+      ],
+      "sources": [
+        "https://github.com/GamithaGimhana/Automated-Greenhouse-Management-System/blob/main/README.md"
+      ]
+    },
+    {
+      "id": "iso8583",
+      "name": "ISO 8583 Toolkit",
+      "category": "Mobile",
+      "featured": false,
+      "repository": "https://github.com/GamithaGimhana/ISO-8583-Parser-Android",
+      "repositories": [
+        "https://github.com/GamithaGimhana/ISO-8583-Parser-Android",
+        "https://github.com/GamithaGimhana/ISO-8583-Simulator"
+      ],
+      "stack": [
+        "Java",
+        "Android",
+        "jPOS",
+        "TCP Sockets"
+      ],
+      "summary": "Android experiments for decoding payment messages and simulating a POS-to-switch request-and-response flow.",
+      "details": "The parser displays message headers, MTI and data elements using jPOS. The separate simulator constructs a sale request and exchanges it with a local switch server over TCP.",
+      "contribution": "Public personal experiments",
+      "status": "Development tools",
+      "caveat": "Described as experiments and simulation, not a certified payment processor or production payment product.",
+      "screenshots": [],
+      "sources": [
+        "https://github.com/GamithaGimhana/ISO-8583-Parser-Android/blob/main/app/src/main/java/com/example/iso8583prase/MainActivity.java",
+        "https://github.com/GamithaGimhana/ISO-8583-Parser-Android/blob/main/app/build.gradle.kts",
+        "https://github.com/GamithaGimhana/ISO-8583-Simulator/blob/main/app/src/main/java/com/example/iso8583simulator/PosTerminal.java",
+        "https://github.com/GamithaGimhana/ISO-8583-Simulator/blob/main/app/src/main/java/com/example/iso8583simulator/SwitchServer.java"
+      ]
+    },
+    {
+      "id": "serenity",
+      "name": "Serenity",
+      "category": "Desktop",
+      "featured": false,
+      "repository": "https://github.com/GamithaGimhana/Serenity-Mental-Healthcare-Center",
+      "repositories": [
+        "https://github.com/GamithaGimhana/Serenity-Mental-Healthcare-Center"
+      ],
+      "stack": [
+        "Java",
+        "JavaFX",
+        "Hibernate",
+        "MySQL",
+        "JasperReports"
+      ],
+      "summary": "A desktop administration application for patients, therapists, therapy sessions and payment records.",
+      "details": "A JavaFX coursework application with controllers for patient registration, therapist and program management, therapy sessions, payments, users and role-specific dashboards. Maven dependencies verify Hibernate, MySQL and JasperReports integration.",
+      "contribution": "Public academic project",
+      "status": "Academic project",
+      "screenshots": [],
+      "sources": [
+        "https://github.com/GamithaGimhana/Serenity-Mental-Healthcare-Center/blob/main/pom.xml",
+        "https://github.com/GamithaGimhana/Serenity-Mental-Healthcare-Center/tree/main/src/main/java/com/gdse/serenity/controller"
+      ]
+    }
+  ]
+}

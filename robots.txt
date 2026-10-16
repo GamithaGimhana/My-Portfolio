@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gamithagimhana.vercel.app/sitemap.xml
