@@ -69,6 +69,20 @@ The checks validate page metadata, local HTML references, and JavaScript syntax.
 
 The production domain in metadata is `https://gamithagimhana.vercel.app`. Change `site` in `data/profile.json` if deploying to another production domain. Building this folder does not update the existing live site; deploy `dist/` or connect this source to its Vercel project.
 
+## Google search identity
+
+The generated pages use a shared `Person` identifier and link the GitHub, LinkedIn, Instagram, and YouTube profiles from `data/profile.json`. The homepage adds `WebSite` markup, and the About page adds `ProfilePage` with that person as its main entity. Keep these facts consistent with the visible biography and update the profile data when they change.
+
+After deploying:
+
+1. Confirm that `site` in `data/profile.json` matches the public production URL.
+2. Add that URL as a URL-prefix property in [Google Search Console](https://search.google.com/search-console/) and complete Google's ownership verification.
+3. Submit `sitemap.xml`, then inspect the homepage and `about.html` with URL Inspection and request indexing if needed.
+4. Check the live About page with [Google's Rich Results Test](https://search.google.com/test/rich-results).
+5. Link to the portfolio from the public profiles you control and keep your name and biography accurate across them.
+
+[Knowledge panels](https://support.google.com/knowledgepanel/answer/9163198) are generated automatically by Google. Structured data, Search Console verification, and a Wikimedia Commons user page do not guarantee one. If a panel appears with a claim option, follow [Google's verification process](https://support.google.com/knowledgepanel/answer/7534902). This repository does not submit indexing requests or claim a panel automatically.
+
 ## Contact behavior
 
 The form creates a `mailto:` draft in the visitor's email application. The visitor reviews and sends it there. It does not submit to a server or claim to deliver messages. Direct email, telephone, and social links remain available without JavaScript. Clipboard failure falls back to selecting the email address.

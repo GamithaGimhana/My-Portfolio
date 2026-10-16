@@ -134,11 +134,50 @@ projects.forEach((project, index) => {
   };
 });
 await mkdir(path.join(root, 'projects'), { recursive: true });
-const personSchema = { '@context':'https://schema.org','@type':'Person', name:profile.name, url:profile.site, jobTitle:profile.role, worksFor:{'@type':'Organization',name:profile.company}, image:profile.site+'/assets/images/my_photo_3.jpeg', sameAs:[profile.github,profile.linkedin,profile.instagram,profile.youtube] };
+// Use one identity across pages so the biography and social profiles describe
+// the same person. This markup does not guarantee a Google knowledge panel.
+const personSchema = {
+  '@type': 'Person',
+  '@id': `${profile.site}/#person`,
+  name: profile.name,
+  url: `${profile.site}/`,
+  jobTitle: profile.role,
+  worksFor: { '@type': 'Organization', name: profile.company },
+  image: `${profile.site}/assets/images/my_photo_3.jpeg`,
+  sameAs: [profile.github, profile.linkedin, profile.instagram, profile.youtube],
+  mainEntityOfPage: { '@id': `${profile.site}/about.html#webpage` }
+};
+function structuredData(page, data, canonical) {
+  const graph = [personSchema];
+  if (page === 'index') {
+    graph.push({
+      '@type': 'WebSite',
+      '@id': `${profile.site}/#website`,
+      url: `${profile.site}/`,
+      name: profile.name,
+      alternateName: 'codebyGami',
+      publisher: { '@id': personSchema['@id'] },
+      inLanguage: 'en'
+    });
+  }
+  if (page === 'about') {
+    graph.push({
+      '@type': 'ProfilePage',
+      '@id': `${canonical}#webpage`,
+      url: canonical,
+      name: data.title,
+      description: data.description,
+      mainEntity: { '@id': personSchema['@id'] },
+      isPartOf: { '@id': `${profile.site}/#website` },
+      inLanguage: 'en'
+    });
+  }
+  return JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c');
+}
 for(const [page, data] of Object.entries(pageData)) {
   const canonical = `${profile.site}/${page==='index'?'':page+'.html'}`;
   let html = `<!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7f6f2"><title>${esc(data.title)}</title><meta name="description" content="${esc(data.description)}"><meta name="author" content="${esc(profile.name)}"><link rel="canonical" href="${esc(canonical)}"><meta property="og:type" content="website"><meta property="og:title" content="${esc(data.title)}"><meta property="og:description" content="${esc(data.description)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(data.image || profile.site + '/assets/images/my_photo_1.JPG')}"><meta property="og:image:alt" content="Portrait of Gamitha Gimhana"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="assets/css/site.css"><script type="application/ld+json">${JSON.stringify(personSchema).replace(/</g,'\\u003c')}</script><noscript><style>@media(max-width:640px){.header-inner{height:auto;min-height:74px;flex-wrap:wrap;padding-block:20px;gap:20px}.nav-links{display:flex;position:static;flex-direction:row;flex-wrap:wrap;padding:0;border:0;box-shadow:none;width:100%;gap:12px}.nav-links>a{font-size:12px;padding:4px}.nav-contact{margin-top:0;border:0}}</style></noscript></head><body data-page="${page}">${header(page.startsWith('projects/') ? 'work' : page)}${data.content()}${footer()}<script id="profile-data" type="application/json">${JSON.stringify({email:profile.email}).replace(/</g,'\\u003c')}</script><script src="assets/js/site.js" defer></script></body></html>`;
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7f6f2"><title>${esc(data.title)}</title><meta name="description" content="${esc(data.description)}"><meta name="author" content="${esc(profile.name)}"><link rel="canonical" href="${esc(canonical)}"><meta property="og:type" content="website"><meta property="og:title" content="${esc(data.title)}"><meta property="og:description" content="${esc(data.description)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(data.image || profile.site + '/assets/images/my_photo_1.JPG')}"><meta property="og:image:alt" content="Portrait of Gamitha Gimhana"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="assets/css/site.css"><script type="application/ld+json">${structuredData(page, data, canonical)}</script><noscript><style>@media(max-width:640px){.header-inner{height:auto;min-height:74px;flex-wrap:wrap;padding-block:20px;gap:20px}.nav-links{display:flex;position:static;flex-direction:row;flex-wrap:wrap;padding:0;border:0;box-shadow:none;width:100%;gap:12px}.nav-links>a{font-size:12px;padding:4px}.nav-contact{margin-top:0;border:0}}</style></noscript></head><body data-page="${page}">${header(page.startsWith('projects/') ? 'work' : page)}${data.content()}${footer()}<script id="profile-data" type="application/json">${JSON.stringify({email:profile.email}).replace(/</g,'\\u003c')}</script><script src="assets/js/site.js" defer></script></body></html>`;
   if (page.startsWith('projects/')) {
     html = html.replace(/(href|src)="(assets\/|projects\/|index\.html|work\.html|about\.html|contact\.html)/g, '$1="../$2');
   }
