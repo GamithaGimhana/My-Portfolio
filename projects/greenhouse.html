@@ -1,13 +1,224 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7f6f2"><title>Automated Greenhouse — Gamitha Gimhana</title><meta name="description" content="A distributed greenhouse management system connecting telemetry, automation rules and crop lifecycle tracking."><meta name="author" content="Gamitha Gimhana"><link rel="canonical" href="https://gamithagimhana.vercel.app/projects/greenhouse.html"><meta property="og:type" content="website"><meta property="og:title" content="Automated Greenhouse — Gamitha Gimhana"><meta property="og:description" content="A distributed greenhouse management system connecting telemetry, automation rules and crop lifecycle tracking."><meta property="og:url" content="https://gamithagimhana.vercel.app/projects/greenhouse.html"><meta property="og:image" content="https://gamithagimhana.vercel.app/assets/images/my_photo_1.JPG"><meta property="og:image:alt" content="Portrait of Gamitha Gimhana"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="../assets/css/site.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Gamitha Gimhana","url":"https://gamithagimhana.vercel.app","jobTitle":"Full Stack Software Engineer Intern","worksFor":{"@type":"Organization","name":"Epic Lanka"},"image":"https://gamithagimhana.vercel.app/assets/images/my_photo_1.JPG","sameAs":["https://github.com/GamithaGimhana","https://www.linkedin.com/in/gamithagimhana/","https://www.instagram.com/gamitha_gimhana/","https://www.youtube.com/@gamiflow"]}</script><noscript><style>@media(max-width:640px){.header-inner{height:auto;min-height:74px;flex-wrap:wrap;padding-block:20px;gap:20px}.nav-links{display:flex;position:static;flex-direction:row;flex-wrap:wrap;padding:0;border:0;box-shadow:none;width:100%;gap:12px}.nav-links>a{font-size:12px;padding:4px}.nav-contact{margin-top:0;border:0}}</style></noscript></head><body data-page="projects/greenhouse"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container header-inner">
-    <a class="brand" href="../index.html" aria-label="Code by Gami, home"><span class="brand-mark" aria-hidden="true">gg</span><span>codebyGami<span class="brand-dot">.</span></span></a>
-    <button class="menu-toggle js-only" type="button" aria-label="Open navigation" aria-controls="main-nav" aria-expanded="false" hidden><svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-    <nav class="nav-links" id="main-nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../work.html" aria-current="page">Work</a><a href="../about.html">About</a><a class="nav-contact" href="../contact.html">Let’s talk <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></nav>
-  </div></header><main id="main"><section class="container case-intro"><a class="case-back" href="../work.html">← All work</a><p class="eyebrow">Cloud &amp; Backend / Project overview</p><h1>Automated Greenhouse<span class="accent">.</span></h1><p class="case-lead">Connecting the moving parts of greenhouse management.</p><p class="case-summary">A distributed greenhouse management system connecting telemetry, automation rules and crop lifecycle tracking.</p><div class="case-meta"><div><span>Project type</span><strong>Academic project</strong></div><div><span>Contribution / scope</span><strong>Academic project</strong></div><div><span>Core technologies</span><strong>Java · Spring Cloud · Eureka</strong></div></div></section>
-  <figure class="container case-visual"><div class="project-visual visual-greenhouse"><div class="project-artwork"><span class="visual-label">Cloud &amp; Backend</span><div class="artwork"><div><div class="artwork-word flood-logo"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3C7 2 2 8 5 16c8 4 14-1 14-13ZM3 21 16 8"/></svg>Greenhouse</div><p class="artwork-sub">Connected systems. Growing possibilities.</p></div><span class="artwork-note">PROJECT IDENTITY · MICROSERVICES</span></div></div></div><figcaption>Custom project artwork. Explore the implementation in the source links below.</figcaption></figure>
-  <div class="container case-body"><section class="case-section"><div class="case-section-heading"><span>01 / The idea</span><h2>What is it?</h2></div><div class="case-section-content"><p>Zones, sensor readings, automation decisions, and crop records represent different parts of greenhouse operations. This project explores how to model those responsibilities as cooperating services instead of one tightly coupled application.</p></div></section>
-  <section class="case-section"><div class="case-section-heading"><span>02 / The experience</span><h2>What it does.</h2></div><div class="case-features"><article><span class="feature-index">01</span><h3>Zone management</h3><p>Organize greenhouse zones as a distinct application responsibility.</p></article><article><span class="feature-index">02</span><h3>Sensor data</h3><p>A telemetry service handles sensor-related records and inputs.</p></article><article><span class="feature-index">03</span><h3>Automation rules</h3><p>Automation actions are separated from the collection of telemetry.</p></article><article><span class="feature-index">04</span><h3>Crop lifecycle</h3><p>Crop records are managed by their own domain service.</p></article></div></section>
-  <section class="case-section"><div class="case-section-heading"><span>03 / Under the surface</span><h2>How it’s built.</h2></div><div class="case-section-content"><p>Java and Spring Cloud provide the service foundation. Eureka supports discovery, a central configuration server coordinates configuration, and an API gateway provides an entry point to the domain services. MySQL supports persistence.</p><ol class="architecture-flow"><li>API gateway</li><li>Spring Cloud services</li><li>MySQL</li></ol><div class="tags"><span class="tag">Java</span><span class="tag">Spring Cloud</span><span class="tag">Eureka</span><span class="tag">MySQL</span><span class="tag">REST APIs</span></div></div></section>
-  <section class="case-section"><div class="case-section-heading"><span>04 / The work</span><h2>Project scope.</h2></div><div class="case-section-content"><p>The public project implements a distributed management system with four domain services. A registry, central configuration server, and gateway provide the supporting service infrastructure.</p><h3>Technical focus</h3><p>Service boundaries, discovery, central configuration, and coordination across a distributed application.</p></div></section>
-  <section class="case-section" id="project-source"><div class="case-section-heading"><span>05 / Go a little deeper</span><h2>Explore the project.</h2></div><div class="case-section-content"><p>Take a look at the implementation, project documentation, and setup instructions.</p><div class="source-links"><a class="button" href="https://github.com/GamithaGimhana/Automated-Greenhouse-Management-System" target="_blank" rel="noopener noreferrer">View repository <svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div></div></section></div>
-  <section class="case-next"><div class="container"><span class="eyebrow">Keep exploring</span><a href="../projects/iso8583.html"><div><span>Next project</span><h2>ISO 8583 Toolkit</h2></div><svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div></section></main><section class="contact-band" aria-labelledby="contact-heading"><div class="container"><p class="eyebrow">Have something in mind?</p><div class="contact-band-grid"><h2 id="contact-heading">Good things start<br>with <span>a conversation.</span></h2><a class="contact-circle" href="../contact.html" aria-label="Start a conversation"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div><div class="contact-band-bottom"><a href="mailto:gamitha.gimhana99@gmail.com">gamitha.gimhana99@gmail.com</a><p>For collaborations, interesting ideas, and a good hello.</p></div></div></section><footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="../index.html">codebyGami<span class="accent">.</span></a><span>© 2026 Gamitha Gimhana. Crafted with care.</span><nav class="footer-links" aria-label="Social profiles"><a href="https://github.com/GamithaGimhana" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/gamithagimhana/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://www.instagram.com/gamitha_gimhana/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.youtube.com/@gamiflow" target="_blank" rel="noopener noreferrer">YouTube</a></nav></div></footer><script id="profile-data" type="application/json">{"email":"gamitha.gimhana99@gmail.com"}</script><script src="../assets/js/site.js" defer></script></body></html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Automated Greenhouse — Gamitha Gimhana</title>
+  <meta name="description"
+    content="A distributed greenhouse management system connecting telemetry, automation rules and crop lifecycle tracking.">
+  <meta name="author" content="Gamitha Gimhana">
+  <link rel="canonical" href="https://gamithagimhana.vercel.app/projects/greenhouse.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Automated Greenhouse — Gamitha Gimhana">
+  <meta property="og:description"
+    content="A distributed greenhouse management system connecting telemetry, automation rules and crop lifecycle tracking.">
+  <meta property="og:url" content="https://gamithagimhana.vercel.app/projects/greenhouse.html">
+  <meta property="og:image" content="https://gamithagimhana.vercel.app/assets/images/my_photo_1.JPG">
+  <meta property="og:image:alt" content="Portrait of Gamitha Gimhana">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script
+    type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Gamitha Gimhana","url":"https://gamithagimhana.vercel.app","jobTitle":"Full Stack Software Engineer Intern","worksFor":{"@type":"Organization","name":"Epic Lanka"},"image":"https://gamithagimhana.vercel.app/assets/images/my_photo_1.JPG","sameAs":["https://github.com/GamithaGimhana","https://www.linkedin.com/in/gamithagimhana/","https://www.instagram.com/gamitha_gimhana/","https://www.youtube.com/@gamiflow"]}</script>
+  <noscript>
+    <style>
+      @media(max-width:640px) {
+        .header-inner {
+          height: auto;
+          min-height: 74px;
+          flex-wrap: wrap;
+          padding-block: 20px;
+          gap: 20px
+        }
+
+        .nav-links {
+          display: flex;
+          position: static;
+          flex-direction: row;
+          flex-wrap: wrap;
+          padding: 0;
+          border: 0;
+          box-shadow: none;
+          width: 100%;
+          gap: 12px
+        }
+
+        .nav-links>a {
+          font-size: 12px;
+          padding: 4px
+        }
+
+        .nav-contact {
+          margin-top: 0;
+          border: 0
+        }
+      }
+    </style>
+  </noscript>
+</head>
+
+<body data-page="projects/greenhouse"><a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Code by Gami, home"><span class="brand-mark"
+          aria-hidden="true">gg</span><span>codebyGami<span class="brand-dot">.</span></span></a>
+      <button class="menu-toggle js-only" type="button" aria-label="Open navigation" aria-controls="main-nav"
+        aria-expanded="false" hidden><svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg></button>
+      <nav class="nav-links" id="main-nav" aria-label="Main navigation"><a href="../index.html">Home</a><a
+          href="../work.html" aria-current="page">Work</a><a href="../about.html">About</a><a class="nav-contact"
+          href="../contact.html">Let’s talk <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 17 17 7M7 7h10v10" />
+          </svg></a></nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="container case-intro"><a class="case-back" href="../work.html">← All work</a>
+      <p class="eyebrow">Cloud &amp; Backend / Project overview</p>
+      <h1>Automated Greenhouse<span class="accent">.</span></h1>
+      <p class="case-lead">Connecting the moving parts of greenhouse management.</p>
+      <p class="case-summary">A distributed greenhouse management system connecting telemetry, automation rules and crop
+        lifecycle tracking.</p>
+      <div class="case-meta">
+        <div><span>Project type</span><strong>Academic project</strong></div>
+        <div><span>Contribution / scope</span><strong>Academic project</strong></div>
+        <div><span>Core technologies</span><strong>Java · Spring Cloud · Eureka</strong></div>
+      </div>
+    </section>
+    <figure class="container case-visual">
+      <div class="project-visual visual-greenhouse">
+        <div class="project-artwork"><span class="visual-label">Cloud &amp; Backend</span>
+          <div class="artwork">
+            <div>
+              <div class="artwork-word flood-logo"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 3C7 2 2 8 5 16c8 4 14-1 14-13ZM3 21 16 8" />
+                </svg>Greenhouse</div>
+              <p class="artwork-sub">Connected systems. Growing possibilities.</p>
+            </div><span class="artwork-note">PROJECT IDENTITY · MICROSERVICES</span>
+          </div>
+        </div>
+      </div>
+      <figcaption>Custom project artwork. Explore the implementation in the source links below.</figcaption>
+    </figure>
+    <div class="container case-body">
+      <section class="case-section">
+        <div class="case-section-heading"><span>01 / The idea</span>
+          <h2>What is it?</h2>
+        </div>
+        <div class="case-section-content">
+          <p>Zones, sensor readings, automation decisions, and crop records represent different parts of greenhouse
+            operations. This project explores how to model those responsibilities as cooperating services instead of one
+            tightly coupled application.</p>
+        </div>
+      </section>
+      <section class="case-section">
+        <div class="case-section-heading"><span>02 / The experience</span>
+          <h2>What it does.</h2>
+        </div>
+        <div class="case-features">
+          <article><span class="feature-index">01</span>
+            <h3>Zone management</h3>
+            <p>Organize greenhouse zones as a distinct application responsibility.</p>
+          </article>
+          <article><span class="feature-index">02</span>
+            <h3>Sensor data</h3>
+            <p>A telemetry service handles sensor-related records and inputs.</p>
+          </article>
+          <article><span class="feature-index">03</span>
+            <h3>Automation rules</h3>
+            <p>Automation actions are separated from the collection of telemetry.</p>
+          </article>
+          <article><span class="feature-index">04</span>
+            <h3>Crop lifecycle</h3>
+            <p>Crop records are managed by their own domain service.</p>
+          </article>
+        </div>
+      </section>
+      <section class="case-section">
+        <div class="case-section-heading"><span>03 / Under the surface</span>
+          <h2>How it’s built.</h2>
+        </div>
+        <div class="case-section-content">
+          <p>Java and Spring Cloud provide the service foundation. Eureka supports discovery, a central configuration
+            server coordinates configuration, and an API gateway provides an entry point to the domain services. MySQL
+            supports persistence.</p>
+          <ol class="architecture-flow">
+            <li>API gateway</li>
+            <li>Spring Cloud services</li>
+            <li>MySQL</li>
+          </ol>
+          <div class="tags"><span class="tag">Java</span><span class="tag">Spring Cloud</span><span
+              class="tag">Eureka</span><span class="tag">MySQL</span><span class="tag">REST APIs</span></div>
+        </div>
+      </section>
+      <section class="case-section">
+        <div class="case-section-heading"><span>04 / The work</span>
+          <h2>Project scope.</h2>
+        </div>
+        <div class="case-section-content">
+          <p>The public project implements a distributed management system with four domain services. A registry,
+            central configuration server, and gateway provide the supporting service infrastructure.</p>
+          <h3>Technical focus</h3>
+          <p>Service boundaries, discovery, central configuration, and coordination across a distributed application.
+          </p>
+        </div>
+      </section>
+      <section class="case-section" id="project-source">
+        <div class="case-section-heading"><span>05 / Go a little deeper</span>
+          <h2>Explore the project.</h2>
+        </div>
+        <div class="case-section-content">
+          <p>Take a look at the implementation, project documentation, and setup instructions.</p>
+          <div class="source-links"><a class="button"
+              href="https://github.com/GamithaGimhana/Automated-Greenhouse-Management-System" target="_blank"
+              rel="noopener noreferrer">View repository <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 17 17 7M7 7h10v10" />
+              </svg></a></div>
+        </div>
+      </section>
+    </div>
+    <section class="case-next">
+      <div class="container"><span class="eyebrow">Keep exploring</span><a href="../projects/iso8583.html">
+          <div><span>Next project</span>
+            <h2>ISO 8583 Toolkit</h2>
+          </div><svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 17 17 7M7 7h10v10" />
+          </svg>
+        </a></div>
+    </section>
+  </main>
+  <section class="contact-band" aria-labelledby="contact-heading">
+    <div class="container">
+      <p class="eyebrow">Have something in mind?</p>
+      <div class="contact-band-grid">
+        <h2 id="contact-heading">Good things start<br>with <span>a conversation.</span></h2><a class="contact-circle"
+          href="../contact.html" aria-label="Start a conversation"><svg class="icon " viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path d="M7 17 17 7M7 7h10v10" />
+          </svg></a>
+      </div>
+      <div class="contact-band-bottom"><a href="mailto:gamitha.gimhana99@gmail.com">gamitha.gimhana99@gmail.com</a>
+        <p>For collaborations, interesting ideas, and a good hello.</p>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="container footer-inner"><a class="footer-brand" href="../index.html">codebyGami<span
+          class="accent">.</span></a><span>© 2026 Gamitha Gimhana. Crafted with care.</span>
+      <nav class="footer-links" aria-label="Social profiles"><a href="https://github.com/GamithaGimhana" target="_blank"
+          rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/gamithagimhana/" target="_blank"
+          rel="noopener noreferrer">LinkedIn</a><a href="https://www.instagram.com/gamitha_gimhana/" target="_blank"
+          rel="noopener noreferrer">Instagram</a><a href="https://www.youtube.com/@gamiflow" target="_blank"
+          rel="noopener noreferrer">YouTube</a></nav>
+    </div>
+  </footer>
+  <script id="profile-data" type="application/json">{"email":"gamitha.gimhana99@gmail.com"}</script>
+  <script src="../assets/js/site.js" defer></script>
+</body>
+
+</html>
